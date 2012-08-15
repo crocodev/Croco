@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/activity-dev/!svn/ver/56/trunk/Croco/game1/Classes
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/activity-dev/!svn/ver/54/trunk/Croco/game1/Classes/AppDelegate.h
+END
+CrocoBoardGame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/activity-dev/!svn/ver/56/trunk/Croco/game1/Classes/CrocoBoardGame.cpp
+END
+GameLogic.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/GameLogic.cpp
+END
+HelloWorldScene.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/HelloWorldScene.cpp
+END
+dbword.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/dbword.h
+END
+ResourceMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/activity-dev/!svn/ver/48/trunk/Croco/game1/Classes/ResourceMgr.h
+END
+HelloWorldScene.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/activity-dev/!svn/ver/52/trunk/Croco/game1/Classes/HelloWorldScene.h
+END
+CrocoBoardGame.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/activity-dev/!svn/ver/56/trunk/Croco/game1/Classes/CrocoBoardGame.h
+END
+GameLogic.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/GameLogic.h
+END
+GroupCustomization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/activity-dev/!svn/ver/55/trunk/Croco/game1/Classes/GroupCustomization.cpp
+END
+ResConvertor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/activity-dev/!svn/ver/48/trunk/Croco/game1/Classes/ResConvertor.cpp
+END
+MainMenuLayer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/activity-dev/!svn/ver/56/trunk/Croco/game1/Classes/MainMenuLayer.cpp
+END
+GroupCustomization.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/activity-dev/!svn/ver/54/trunk/Croco/game1/Classes/GroupCustomization.h
+END
+Credits.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/Credits.cpp
+END
+ResConvertor.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/activity-dev/!svn/ver/48/trunk/Croco/game1/Classes/ResConvertor.h
+END
+MainMenuLayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/activity-dev/!svn/ver/53/trunk/Croco/game1/Classes/MainMenuLayer.h
+END
+Credits.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/Credits.h
+END
+SubMenu.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/activity-dev/!svn/ver/40/trunk/Croco/game1/Classes/SubMenu.cpp
+END
+CCScrollLayer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/activity-dev/!svn/ver/40/trunk/Croco/game1/Classes/CCScrollLayer.cpp
+END
+Group.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/Group.h
+END
+SubMenu.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/SubMenu.h
+END
+AppDelegate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/activity-dev/!svn/ver/54/trunk/Croco/game1/Classes/AppDelegate.cpp
+END
+dbword.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/activity-dev/!svn/ver/52/trunk/Croco/game1/Classes/dbword.cpp
+END
+CCScrollLayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Classes/CCScrollLayer.h
+END
+ResourceMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/activity-dev/!svn/ver/48/trunk/Croco/game1/Classes/ResourceMgr.cpp
+END

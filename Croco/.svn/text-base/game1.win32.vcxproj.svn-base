@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_game|Win32">
+      <Configuration>Debug_game</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_test|Win32">
+      <Configuration>Debug_test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{20497527-CCC8-4465-A473-2B9B7B0F8878}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_game|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_game|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_game|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_test|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\cocos2dx\platform\third_party\win32\libxml2;..\;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_DEBUG;COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\cocos2dx\platform\third_party\win32\libraries;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libxml2.lib;libcocos2d.lib;libgles_cm.lib;libBox2d.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>game1.h</HeaderFileName>
+      <InterfaceIdentifierFileName>game1_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>game1_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/game1.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_game|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\cocos2dx\platform\third_party\win32\libxml2;..\;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_DEBUG;COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\cocos2dx\platform\third_party\win32\libraries;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libxml2.lib;libcocos2d.lib;libgles_cm.lib;libBox2d.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>game1.h</HeaderFileName>
+      <InterfaceIdentifierFileName>game1_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>game1_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/game1.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_test|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\cocos2dx\platform\third_party\win32\libxml2;..\;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_DEBUG;COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\cocos2dx\platform\third_party\win32\libraries;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libxml2.lib;libcocos2d.lib;libgles_cm.lib;libBox2d.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>game1.h</HeaderFileName>
+      <InterfaceIdentifierFileName>game1_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>game1_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/game1.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcocos2d.lib;libgles_cm.lib;libBox2d.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>game1.h</HeaderFileName>
+      <InterfaceIdentifierFileName>game1_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>game1_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/game1.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ClassDiagramCroco.cd" />
+    <None Include="Resource\c3.png" />
+    <None Include="Resource\c3_face.png" />
+    <None Include="Resource\c4.png" />
+    <None Include="Resource\c5.png" />
+    <None Include="Resource\cards.xml" />
+    <None Include="Resource\CloseNormal.png" />
+    <None Include="Resource\CloseSelected.png" />
+    <None Include="Resource\c_big.png" />
+    <None Include="Resource\c_blank.png" />
+    <None Include="Resource\c_blank0.png" />
+    <None Include="Resource\c_blank1.png" />
+    <None Include="Resource\c_blank2.png" />
+    <None Include="Resource\c_blank3.png" />
+    <None Include="Resource\desk.png" />
+    <None Include="Resource\GroupCustomization\back.png" />
+    <None Include="Resource\GroupCustomization\background.png" />
+    <None Include="Resource\GroupCustomization\back_normal.png" />
+    <None Include="Resource\GroupCustomization\back_selected.png" />
+    <None Include="Resource\GroupCustomization\blue.png" />
+    <None Include="Resource\GroupCustomization\dot.png" />
+    <None Include="Resource\GroupCustomization\green.png" />
+    <None Include="Resource\GroupCustomization\light.png" />
+    <None Include="Resource\GroupCustomization\red.png" />
+    <None Include="Resource\GroupCustomization\start.png" />
+    <None Include="Resource\GroupCustomization\start_normal.png" />
+    <None Include="Resource\GroupCustomization\start_selected.png" />
+    <None Include="Resource\GroupCustomization\stripe.png" />
+    <None Include="Resource\GroupCustomization\yellow.png" />
+    <None Include="Resource\HelloWorld.png" />
+    <None Include="Resource\hu1.png" />
+    <None Include="Resource\hu2.png" />
+    <None Include="Resource\itm_no_norm.PNG" />
+    <None Include="Resource\itm_other_norm.PNG" />
+    <None Include="Resource\itm_timer_dis.png" />
+    <None Include="Resource\itm_timer_norm.png" />
+    <None Include="Resource\itm_timer_sel.png" />
+    <None Include="Resource\itm_yes_norm.PNG" />
+    <None Include="Resource\layer_free.png" />
+    <None Include="Resource\layer_full.png" />
+    <None Include="Resource\MainMenu\background.png" />
+    <None Include="Resource\mmdot\bk.png" />
+    <None Include="Resource\mmdot\dot.png" />
+    <None Include="Resource\mmdot\l.png" />
+    <None Include="Resource\mmdot\light.png" />
+    <None Include="Resource\Nextscene.png" />
+    <None Include="Resource\p1.PNG" />
+    <None Include="Resource\p2.PNG" />
+    <None Include="Resource\p3.PNG" />
+    <None Include="Resource\pointer.png" />
+    <None Include="Resource\rewind.png" />
+    <None Include="Resource\rewind2.png" />
+    <None Include="Resource\rightcontrol.png" />
+    <None Include="Resource\RightControl\c3.png" />
+    <None Include="Resource\RightControl\c3bottom.png" />
+    <None Include="Resource\RightControl\c3div.png" />
+    <None Include="Resource\RightControl\c3_hybrid.png" />
+    <None Include="Resource\RightControl\c4.png" />
+    <None Include="Resource\RightControl\c4bottom.png" />
+    <None Include="Resource\RightControl\c4div.png" />
+    <None Include="Resource\RightControl\c4_hybrid.png" />
+    <None Include="Resource\RightControl\c5.png" />
+    <None Include="Resource\RightControl\c5bottom.png" />
+    <None Include="Resource\RightControl\c5div.png" />
+    <None Include="Resource\RightControl\c5_hybrid.png" />
+    <None Include="Resource\sonic.png" />
+    <None Include="Resource\SubMenu\2groups.png" />
+    <None Include="Resource\SubMenu\3gamers.png" />
+    <None Include="Resource\SubMenu\3groups.png" />
+    <None Include="Resource\SubMenu\4groups.png" />
+    <None Include="Resource\SubMenu\back.png" />
+    <None Include="Resource\SubMenu\background.png" />
+    <None Include="Resource\SubMenu\hint_bottom.png" />
+    <None Include="Resource\timer.png" />
+    <None Include="Resource\token_blue.png" />
+    <None Include="Resource\token_green.png" />
+    <None Include="Resource\token_red.png" />
+    <None Include="Resource\token_shadow.png" />
+    <None Include="Resource\token_yellow.png" />
+    <None Include="win32\res\game1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32\game1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\AppDelegate.h" />
+    <ClInclude Include="Classes\CCScrollLayer.h" />
+    <ClInclude Include="Classes\Credits.h" />
+    <ClInclude Include="Classes\CrocoBoardGame.h" />
+    <ClInclude Include="Classes\dbword.h" />
+    <ClInclude Include="Classes\GameLogic.h" />
+    <ClInclude Include="Classes\GroupCustomization.h" />
+    <ClInclude Include="Classes\MainMenuLayer.h" />
+    <ClInclude Include="Classes\ResConvertor.h" />
+    <ClInclude Include="Classes\ResourceMgr.h" />
+    <ClInclude Include="Classes\SubMenu.h" />
+    <ClInclude Include="Group.h" />
+    <ClInclude Include="win32\main.h" />
+    <ClInclude Include="win32\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Classes\AppDelegate.cpp" />
+    <ClCompile Include="Classes\CCScrollLayer.cpp" />
+    <ClCompile Include="Classes\Credits.cpp" />
+    <ClCompile Include="Classes\CrocoBoardGame.cpp" />
+    <ClCompile Include="Classes\dbword.cpp" />
+    <ClCompile Include="Classes\GameLogic.cpp" />
+    <ClCompile Include="Classes\GroupCustomization.cpp" />
+    <ClCompile Include="Classes\MainMenuLayer.cpp" />
+    <ClCompile Include="Classes\ResConvertor.cpp" />
+    <ClCompile Include="Classes\ResourceMgr.cpp" />
+    <ClCompile Include="Classes\SubMenu.cpp" />
+    <ClCompile Include="win32\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

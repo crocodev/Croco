@@ -1,0 +1,227 @@
+#ifndef RESCONVER_H
+#define RESCONVER_H
+
+#include "cocos2d.h"
+using namespace cocos2d;
+
+void DoInitResourceConvertor();
+
+class CResConvertor
+{
+private:
+	CResConvertor(){}
+
+public:
+	enum CRCScaleModes{
+		CRC_MODE_SCALEXY = 0, //等比拉伸
+		CRC_MODE_FULLSCREEN = 1, //全屏拉伸
+		CRC_MODE_NONE,//不拉伸
+		CRC_MODE_NUM
+	};
+
+public:
+	//映射拉伸
+	static float MapScale(double in)
+	{
+		if(current_w_h_rate>scaled_w_h_rate)
+		{
+			return scale_y*in;
+		}
+		return scale_x*in;
+	}
+	//映射宽度
+	static float MapWidth(double inWidth)
+	{
+		return scale_x_offset + inWidth * scale_x;
+	}
+
+	//映射高度
+	static float MapHeight(double inHeight)
+	{
+		return scale_y_offset + inHeight * scale_y;
+	}
+
+	//映射矩形
+	static CCRect MapRect(CCRect& inRect)
+	{
+		MapSize(inRect.size);
+		MapPoint(inRect.origin);
+		return inRect;
+	}
+	
+	//映射大小
+	static CCSize MapSize(CCSize& inSize)
+	{
+		inSize.width = inSize.width * scale_x;
+		inSize.height = inSize.height *scale_y;
+		return inSize;
+	}
+
+	//映射点
+	static CCPoint MapPoint(CCPoint& inPoint)
+	{
+		inPoint.x = scale_x_offset + inPoint.x * scale_x;
+		inPoint.y = scale_y_offset + inPoint.y *scale_y;
+		return inPoint;
+	}
+
+	//放置图片对象
+	static void PlaceImage(CCNode* pSprite,CCPoint& pt)
+	{
+		MapPoint(pt);
+		pSprite->setPosition(pt);
+		pSprite->setScaleX(GetScreenScale_X());
+		pSprite->setScaleY(GetScreenScale_Y());
+	}
+
+public:
+	//获取X拉伸值
+	static float GetScreenScale_X()
+	{
+		return scale_x;
+	}
+
+	//获取Y拉伸值
+	static float GetScreenScale_Y()
+	{
+		return scale_y;
+	}
+
+	//获取虚拟桌面宽度
+	static CCSize GetVirtualSize()
+	{
+		CCSize aSize;
+		aSize.width = (float)scale_steps[current_scale_steplevel];
+		aSize.height =scale_steps[current_scale_steplevel]/scaled_w_h_rate;
+		return aSize;
+	}
+
+public:
+	//添加一个虚拟屏幕，实际添加的是高宽比
+	static void AddVirtualScreen(int w,int h)
+	{
+		if((w==0)||(h==0))return;
+		float tmprate = (float)w/h;
+		for (unsigned int i=0;i<w_h_rate.size();i++)
+		{
+			if(tmprate == w_h_rate[i])
+				return;
+		}
+		w_h_rate.push_back(tmprate);
+		Process();
+	}
+
+	//设置拉伸点
+	static void SetScaleStep(const unsigned int* steps,unsigned int step_count)
+	{
+		for(unsigned int i =0;i<step_count;i++)
+		{
+			for (unsigned int t=0;t<scale_steps.size();t++)
+			{
+				if(steps[i] == scale_steps[t])
+					return;
+			}
+			scale_steps.push_back(steps[i]);
+		}
+		Process();
+	}
+
+	//设置拉伸模式
+	static void SetScaleMode(CRCScaleModes aMode)
+	{
+		current_scale_mode = aMode;
+		Process();
+	}
+
+	//获取当前的拉伸模式
+	static CRCScaleModes GetCurrentScaleMode()
+	{
+		return current_scale_mode;
+	}
+
+private:
+	//初始化环境
+	static void Process()
+	{
+		if(scale_steps.size() ==0) return;
+		if(w_h_rate.size()==0)return;
+		CCSize aSize = CCDirector::sharedDirector()->getWinSize();
+		if((aSize.height==0)||(aSize.width ==0)||(w_h_rate.size() == 0))
+			return ;
+		current_w_h_rate = aSize.width/aSize.height;
+		float tmpoffset = 100;
+		for (unsigned int i=0;i<w_h_rate.size();i++)
+		{
+			float tOffset = abs(w_h_rate[i] - current_w_h_rate);
+			if(tOffset == 0)
+			{
+				scaled_w_h_rate = w_h_rate[i];
+				break;
+			}
+			if(tOffset<tmpoffset)
+			{
+				scaled_w_h_rate = w_h_rate[i];
+				tmpoffset = tOffset;
+			}
+		}
+		
+		tmpoffset = 320;
+		for (unsigned int i=0;i<scale_steps.size();i++)
+		{
+			float tOffset = abs(scale_steps[i] - tmpoffset);
+			if(tOffset == 0)
+			{
+				current_scale_steplevel = i;
+				break;
+			}
+			if(tOffset<tmpoffset)
+			{
+				current_scale_steplevel = i;
+				tmpoffset = tOffset;
+			}
+		}
+
+		if(current_scale_mode == CRC_MODE_FULLSCREEN)
+		{
+			scale_x = aSize.width/scale_steps[current_scale_steplevel] ;
+			scale_y = aSize.height/(scale_steps[current_scale_steplevel]/current_w_h_rate);
+			scale_y_offset = scale_x_offset = 0;
+		}
+		else if (current_scale_mode == CRC_MODE_SCALEXY)
+		{
+			if(current_w_h_rate>scaled_w_h_rate)//实际宽高比较大，以高度为基准拉伸
+			{
+				scale_y = scale_x = aSize.height/(scale_steps[current_scale_steplevel]/scaled_w_h_rate);
+				scale_y_offset = 0;
+				scale_x_offset = (int)(aSize.width - scale_steps[current_scale_steplevel]*scale_x)/2;
+			}
+			else //反之，以宽度为基准拉伸
+			{
+				scale_y = scale_x = aSize.width/scale_steps[current_scale_steplevel];
+				scale_x_offset = 0;
+				scale_y_offset = (int)(aSize.height - scale_y*scale_steps[current_scale_steplevel]/scaled_w_h_rate)/2;
+			}
+		}
+		else
+		{
+			scale_x = 1;
+			scale_y = 1;
+			scale_y_offset = (int)(aSize.height - scale_steps[current_scale_steplevel]/scaled_w_h_rate)/2;
+			scale_x_offset = (int)(aSize.width - scale_steps[current_scale_steplevel])/2;
+		}
+	}
+
+private:
+	static std::vector<int> scale_steps; //存放指定宽度
+	static std::vector<float> w_h_rate; //存放指定高宽比
+	static float scaled_w_h_rate;	//拉伸后高宽比
+	static float current_w_h_rate;	//屏幕实际高宽比
+	static CRCScaleModes current_scale_mode;  //拉伸方式
+	static float scale_x;	//x方向拉伸值
+	static float scale_y;	//y方向拉伸值
+	static int current_scale_steplevel;	//当前拉伸级别
+	static int scale_x_offset;  //水平黑边
+	static int scale_y_offset;	//垂直黑边
+};
+
+#endif

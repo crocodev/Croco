@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ActionLayer::Card3Callback(cocos2d::CCObject*):CrocoBoardGame.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "hints_colors[current_group]">
+            </PersistentString>
+            <PersistentString
+               value = "gamestate">
+            </PersistentString>
+            <PersistentString
+               value = "current_group">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ActionLayer::ActionLayer(int, std::string*, std::string*, std::string*, std::string*):CrocoBoardGame.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "dbw">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DBWord::DBWord(char const*):dbword.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "xmlDocument">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ActionLayer::ShowHint(int, cocos2d::CCPoint, char const*):CrocoBoardGame.cpp">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

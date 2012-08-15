@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{7bd3707c-366a-47f8-8c8d-5fc5b4320268}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{675d97a6-4457-40f0-a489-21858cca0919}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{fad8dcf9-e559-439b-ad43-45516f5c0641}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;png;manifest</Extensions>
+    </Filter>
+    <Filter Include="resource\RightControl">
+      <UniqueIdentifier>{3471966c-37eb-4240-8222-c7cb62e24fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\SubMenu">
+      <UniqueIdentifier>{66725741-3e21-49a0-a95a-90aff3380a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\GroupCustomization">
+      <UniqueIdentifier>{db346467-596f-4d4a-a0ed-81f617109c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\MainMenu">
+      <UniqueIdentifier>{622eb039-c74e-4152-822a-193b8a1ae2f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\mmdot">
+      <UniqueIdentifier>{defe898a-85d1-4810-ba47-09de274c8597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\RewindAnimation">
+      <UniqueIdentifier>{90ca41a1-161e-4c06-bbb3-54e21edbf0d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\tokens">
+      <UniqueIdentifier>{a9f7128f-f1ad-4246-a8aa-f95089a5ee62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="win32\res\game1.ico">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\CloseSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\CloseNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\HelloWorld.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="ClassDiagramCroco.cd" />
+    <None Include="Resource\c_big.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c_blank.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c3_face.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\cards.xml">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\desk.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\hu1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\hu2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\itm_no_norm.PNG">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\itm_other_norm.PNG">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\itm_timer_dis.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\itm_timer_norm.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\itm_timer_sel.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\itm_yes_norm.PNG">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\layer_free.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\layer_full.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Nextscene.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\p1.PNG">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\p2.PNG">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\p3.PNG">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\pointer.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\rightcontrol.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\sonic.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\timer.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\RightControl\c3.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c3_hybrid.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c3bottom.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c3div.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c4.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c4_hybrid.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c4bottom.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c4div.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c5.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c5_hybrid.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c5bottom.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\RightControl\c5div.png">
+      <Filter>resource\RightControl</Filter>
+    </None>
+    <None Include="Resource\SubMenu\2groups.png">
+      <Filter>resource\SubMenu</Filter>
+    </None>
+    <None Include="Resource\SubMenu\3gamers.png">
+      <Filter>resource\SubMenu</Filter>
+    </None>
+    <None Include="Resource\SubMenu\3groups.png">
+      <Filter>resource\SubMenu</Filter>
+    </None>
+    <None Include="Resource\SubMenu\4groups.png">
+      <Filter>resource\SubMenu</Filter>
+    </None>
+    <None Include="Resource\SubMenu\back.png">
+      <Filter>resource\SubMenu</Filter>
+    </None>
+    <None Include="Resource\SubMenu\background.png">
+      <Filter>resource\SubMenu</Filter>
+    </None>
+    <None Include="Resource\SubMenu\hint_bottom.png">
+      <Filter>resource\SubMenu</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\back.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\back_normal.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\back_selected.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\background.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\blue.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\dot.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\green.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\red.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\start.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\start_normal.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\start_selected.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\stripe.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\yellow.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\MainMenu\background.png">
+      <Filter>resource\MainMenu</Filter>
+    </None>
+    <None Include="Resource\mmdot\bk.png">
+      <Filter>resource\mmdot</Filter>
+    </None>
+    <None Include="Resource\mmdot\dot.png">
+      <Filter>resource\mmdot</Filter>
+    </None>
+    <None Include="Resource\mmdot\l.png">
+      <Filter>resource\mmdot</Filter>
+    </None>
+    <None Include="Resource\mmdot\light.png">
+      <Filter>resource\mmdot</Filter>
+    </None>
+    <None Include="Resource\rewind2.png">
+      <Filter>resource\RewindAnimation</Filter>
+    </None>
+    <None Include="Resource\rewind.png">
+      <Filter>resource\RewindAnimation</Filter>
+    </None>
+    <None Include="Resource\token_yellow.png">
+      <Filter>resource\tokens</Filter>
+    </None>
+    <None Include="Resource\token_shadow.png">
+      <Filter>resource\tokens</Filter>
+    </None>
+    <None Include="Resource\token_red.png">
+      <Filter>resource\tokens</Filter>
+    </None>
+    <None Include="Resource\token_green.png">
+      <Filter>resource\tokens</Filter>
+    </None>
+    <None Include="Resource\token_blue.png">
+      <Filter>resource\tokens</Filter>
+    </None>
+    <None Include="Resource\GroupCustomization\light.png">
+      <Filter>resource\GroupCustomization</Filter>
+    </None>
+    <None Include="Resource\c_blank0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c_blank1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c_blank2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\c_blank3.png">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32\game1.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="win32\resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\main.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\AppDelegate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CrocoBoardGame.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CCScrollLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\MainMenuLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SubMenu.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Credits.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\dbword.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameLogic.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GroupCustomization.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ResConvertor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ResourceMgr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="win32\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\AppDelegate.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CrocoBoardGame.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CCScrollLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\MainMenuLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SubMenu.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Credits.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\dbword.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GroupCustomization.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameLogic.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ResConvertor.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ResourceMgr.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

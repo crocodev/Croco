@@ -1,0 +1,21 @@
+
+#include "ResConvertor.h"
+
+std::vector<int> CResConvertor::scale_steps;
+std::vector<float> CResConvertor::w_h_rate;
+float CResConvertor::current_w_h_rate = 3/4;
+CResConvertor::CRCScaleModes CResConvertor::current_scale_mode = CResConvertor::CRC_MODE_NONE;
+float CResConvertor::scale_x = 1;
+float CResConvertor::scale_y = 1;
+float CResConvertor::scaled_w_h_rate = 3/4;
+int CResConvertor::current_scale_steplevel = 0;
+int CResConvertor::scale_x_offset = 0;
+int CResConvertor::scale_y_offset = 0;
+
+void DoInitResourceConvertor()
+{
+	int step = 768;
+	CResConvertor::AddVirtualScreen(1024,768);
+	CResConvertor::SetScaleStep((const unsigned int*)&step,1);
+	CResConvertor::SetScaleMode(CResConvertor::CRC_MODE_SCALEXY);
+}

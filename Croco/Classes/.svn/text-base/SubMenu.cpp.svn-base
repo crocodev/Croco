@@ -1,0 +1,59 @@
+#include "SubMenu.h"
+#include "GroupCustomization.h"
+
+SubMenu::SubMenu(void)
+{
+	//set center of the screen
+	CCSize size = CCDirector::sharedDirector()->getWinSize();
+	float x = size.width/2;
+    float y = size.height/2;
+
+	//add background sprite
+	CCSprite* background = CCSprite::spriteWithFile("SubMenu/background.png");
+	addChild(background,0);
+	background->setPosition(ccp(x,y));
+
+	//menu icons
+	CCMenuItem* itm_3gamers = CCMenuItemImage::itemFromNormalImage("SubMenu/3gamers.png","SubMenu/3gamers.png",this,menu_selector(SubMenu::itm_3gamersCallback));
+	CCMenuItem* itm_2groups = CCMenuItemImage::itemFromNormalImage("SubMenu/2groups.png","SubMenu/2groups.png",this,menu_selector(SubMenu::itm_2groupsCallback));
+	CCMenuItem* itm_3groups = CCMenuItemImage::itemFromNormalImage("SubMenu/3groups.png","SubMenu/3groups.png",this,menu_selector(SubMenu::itm_3groupsCallback));
+	CCMenuItem* itm_4groups = CCMenuItemImage::itemFromNormalImage("SubMenu/4groups.png","SubMenu/4groups.png",this,menu_selector(SubMenu::itm_4groupsCallback));
+	CCMenuItem* itm_back = CCMenuItemImage::itemFromNormalImage("SubMenu/back.png","SubMenu/back.png",this,menu_selector(SubMenu::itm_backCallback));
+	CCMenu* menu = CCMenu::menuWithItems(itm_3gamers,itm_2groups,itm_3groups,itm_4groups,itm_back,NULL);
+	addChild(menu);
+	itm_3gamers->setPosition(ccp(-220,+135));
+	itm_2groups->setPosition(ccp(+220,+135));
+	itm_3groups->setPosition(ccp(-220,-183));
+	itm_4groups->setPosition(ccp(+220,-183));
+	itm_back->setPosition(ccp(-460,-345));
+	menu->setPosition(CCPointMake(x,y));
+}
+void SubMenu::itm_3gamersCallback(CCObject* pSender)
+{
+	GoGroupCustomization(GAMERS_3);
+}
+void SubMenu::itm_2groupsCallback(CCObject* pSender)
+{
+	GoGroupCustomization(GROUP_2);
+}
+void SubMenu::itm_3groupsCallback(CCObject* pSender)
+{
+	GoGroupCustomization(GROUP_3);
+}
+void SubMenu::itm_4groupsCallback(CCObject* pSender)
+{
+	GoGroupCustomization(GROUP_4);
+}
+void SubMenu::GoGroupCustomization(int GameMode)
+{
+	CCScene* pScene = CCScene::node();
+	CCLayer* pLayer = new GroupCustomization(GameMode);
+	pScene->addChild(pLayer,0);
+	CCScene* s = CCTransitionFade::transitionWithDuration(1.0f, pScene);
+	pLayer->release();
+	CCDirector::sharedDirector()->pushScene(s);
+}
+void SubMenu::itm_backCallback(CCObject* pSender)
+{
+	CCDirector::sharedDirector()->popScene();
+}

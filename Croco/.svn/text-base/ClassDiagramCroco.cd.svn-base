@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Основной класс игры">
+    <Position X="12.103" Y="12.013" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Класс для главного меню">
+    <Position X="7.281" Y="0.521" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Класс для меню выбора количества команд">
+    <Position X="7.291" Y="3.042" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Не используется">
+    <Position X="0.531" Y="6.906" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Класс ячеек и координат фишек на поле">
+    <Position X="4.26" Y="7.271" Height="0.75" Width="1.44" />
+  </Comment>
+  <Comment CommentText="Класс фишек и их теней + позиция, не привязан к группам">
+    <Position X="2.75" Y="6.938" Height="0.75" Width="1.44" />
+  </Comment>
+  <Comment CommentText="Класс сведений о разработчиках, пока пустое окно">
+    <Position X="5.729" Y="6.365" Height="0.75" Width="1.44" />
+  </Comment>
+  <Comment CommentText="Главный класс для платформы Windows и запуска приложения">
+    <Position X="7.25" Y="7" Height="0.75" Width="1.44" />
+  </Comment>
+  <Comment CommentText="Класс для работы с базой слов">
+    <Position X="5.037" Y="2.739" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Класс для ввода данных с клавиатуры о командах">
+    <Position X="2.812" Y="3.115" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Класс для ввода данных с клавиатуры о командах">
+    <Position X="0.562" Y="4.906" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Класс скроллинга&#xD;&#xA;Класс для задания имен команд">
+    <Position X="12.083" Y="8.083" Height="0.628" Width="1.68" />
+  </Comment>
+  <Comment CommentText="Классы для осуществления откатов в игре">
+    <Position X="3.322" Y="10.294" Height="0.75" Width="2.335" />
+  </Comment>
+  <Class Name="AppDelegate">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAACABQAAAEAAAAAAAAAAAAg=</HashCode>
+      <FileName>Classes\AppDelegate.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCScrollLayer">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgUAgAAAAAEAACEAIVAABAAQAAAAAAAAAAgAgIACAA=</HashCode>
+      <FileName>Classes\CCScrollLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CellTable">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAABABAAAAAAAAAAQAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CrocoBoardGame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteTokenClass">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAQAAAAEAAAAAAAAAACAAAAAEQCA=</HashCode>
+      <FileName>Classes\CrocoBoardGame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionLayer">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBUAQhQGLgRQADIMPiEADAETQEAAkRJCDBFiCADECGA=</HashCode>
+      <FileName>Classes\CrocoBoardGame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenuLayer">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAUAAEAAAAAAAAAAAAAAAAAAAFAAAAEABAAAA=</HashCode>
+      <FileName>Classes\MainMenuLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SubMenu">
+    <Position X="9" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAACAAAAIAgAAACAAAAAABAAAAIAAAAAA=</HashCode>
+      <FileName>Classes\SubMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Credits">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Credits.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupCustomization">
+    <Position X="12" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAQAAAAAAAAAAUBoAQAAAAAAAAAAABgBAAAABA=</HashCode>
+      <FileName>GroupCustomization.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyboardNotificationLayer">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAgAAABAABACAAAAKAAAAAAAAAAAAEA=</HashCode>
+      <FileName>GroupCustomization.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CurrentGroupLayer">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <InheritanceLine Type="KeyboardNotificationLayer">
+      <InheritanceModifierLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.153" Width="0.5" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAQACABEBAAAQAAhACJAAAAAQAAABgAACBAAA=</HashCode>
+      <FileName>GroupCustomization.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBWord">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAADAAAAAAAAAAIAAAEAABAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Classes\dbword.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CGroup">
+    <Position X="0.5" Y="8.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAQAAAARAAAAAAAIAAAACAABAAAEA=</HashCode>
+      <FileName>Group.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CGroupsSnapshot">
+    <Position X="3.25" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAEAAAAAAAIAAAAAAAAAQ=</HashCode>
+      <FileName>Group.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSnapshots">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAEAIAAAAAAAAAAAAyEAAAAAAAAAAAAIAAIAAAASABE=</HashCode>
+      <FileName>Group.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Colors">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAQAAAAAA=</HashCode>
+      <FileName>GroupCustomization.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

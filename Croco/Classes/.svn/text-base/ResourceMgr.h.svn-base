@@ -1,0 +1,35 @@
+#ifndef RESOURCE_MGR_H__
+#define RESOURCE_MGR_H__
+#include "cocos2d.h"
+using namespace cocos2d;
+
+bool DoloadResource(int width,float w_h_rate,int nIndex);
+
+
+struct RTexture
+{
+	DWORD			bUse;
+	CCTexture2D*	iTexture;
+};
+
+class CResourceMgr
+{
+private:
+	CResourceMgr(void);
+
+public:
+	static void Init(int anumber_of_resource);
+	static CCTexture2D* GetImage(int nIndex);
+	static void DropImage(int nIndex);
+	static void ReleaseImage(int nIndex);
+	static void ReleaseCache();
+	static void CompressCache();
+	friend bool DoloadResource(int width,float w_h_rate,int nIndex);
+
+private:
+	static std::vector<RTexture> Array;
+	static int width;
+	static float w_h_rate;
+};
+
+#endif

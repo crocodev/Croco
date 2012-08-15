@@ -1,0 +1,45 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 27
+/svn/activity-dev/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/activity-dev/!svn/ver/56/trunk/Croco/game1
+END
+game1.win32.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/activity-dev/!svn/ver/48/trunk/Croco/game1/game1.win32.vcxproj.filters
+END
+game1.win32.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/activity-dev/!svn/ver/48/trunk/Croco/game1/game1.win32.vcxproj
+END
+game1.win32.idc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/activity-dev/!svn/ver/38/trunk/Croco/game1/game1.win32.idc
+END
+Group.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/Group.h
+END
+GroupCustomization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/GroupCustomization.cpp
+END
+ClassDiagramCroco.cd
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/activity-dev/!svn/ver/17/trunk/Croco/game1/ClassDiagramCroco.cd
+END

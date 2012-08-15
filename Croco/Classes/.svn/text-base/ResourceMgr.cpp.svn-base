@@ -1,0 +1,110 @@
+#include "ResourceMgr.h"
+#include "ResConvertor.h"
+
+std::vector<RTexture> CResourceMgr::Array;
+int CResourceMgr::width = 768;
+float CResourceMgr::w_h_rate = 3/4;
+
+void CResourceMgr::Init(int anumber_of_resource)
+{
+	RTexture t = {0,0};
+	Array.resize(anumber_of_resource,t);
+
+	//init ResConvertor
+	DoInitResourceConvertor();
+	CCSize aSize = CResConvertor::GetVirtualSize();
+	width = aSize.width;
+	w_h_rate = aSize.width/aSize.height;
+	//*/
+}
+
+CCTexture2D* CResourceMgr::GetImage(int nIndex)
+{
+	if (nIndex >= Array.size())
+	{
+		return 0;
+	}
+
+	if(Array[nIndex].iTexture == 0)
+	{
+		DoloadResource(width,w_h_rate,nIndex);
+	}
+	Array[nIndex].bUse = 1;
+	return Array[nIndex].iTexture;
+}
+
+void CResourceMgr::DropImage(int nIndex)
+{
+	if (nIndex >= Array.size())
+	{
+		return;
+	}
+	Array[nIndex].bUse = 0;
+}
+
+void CResourceMgr::ReleaseImage(int nIndex)
+{
+	if (nIndex >= Array.size())
+	{
+		return;
+	}
+
+	if(Array[nIndex].iTexture != 0)
+	{
+		CCTextureCache::sharedTextureCache()->removeTexture(Array[nIndex].iTexture);
+		delete Array[nIndex].iTexture;
+		Array[nIndex].iTexture=0;
+		Array[nIndex].bUse = 0;
+	}
+}
+
+void CResourceMgr::CompressCache()
+{
+	for (int i =0;i<Array.size();i++)
+	{
+		if((Array[i].iTexture != 0)&& (Array[i].bUse ==0))
+		{
+			CCTextureCache::sharedTextureCache()->removeTexture(Array[i].iTexture);
+			delete Array[i].iTexture;
+			Array[i].iTexture = 0;
+			Array[i].bUse = 0;
+		}
+	}
+}
+
+void CResourceMgr::ReleaseCache()
+{
+	for (int i =0;i<Array.size();i++)
+	{
+		if(Array[i].iTexture != 0)
+		{
+			CCTextureCache::sharedTextureCache()->removeTexture(Array[i].iTexture);
+			delete Array[i].iTexture;
+			Array[i].iTexture = 0;
+			Array[i].bUse = 0;
+		}
+	}
+}
+
+bool DoloadResource(int width,float w_h_rate,int nIndex)
+{
+	char tmpfilename[MAX_PATH] = {0};
+	sprintf(tmpfilename,"%d.png",nIndex);
+	CCTexture2D* aTexture = CCTextureCache::sharedTextureCache()->addImage(tmpfilename);
+	if(aTexture!=NULL)
+	{
+		CResourceMgr::Array[nIndex].iTexture = aTexture;
+		return true;
+	}else
+	{
+		CResourceMgr::CompressCache();
+		aTexture = CCTextureCache::sharedTextureCache()->addImage(tmpfilename);
+		if(aTexture!=NULL)
+		{
+			CResourceMgr::Array[nIndex].iTexture = aTexture;
+			return true;
+		}
+	}
+	return false;
+}
+
