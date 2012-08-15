@@ -22,6 +22,8 @@ MainMenuLayer::MainMenuLayer(int isGameStarted)
     chdir("/Users/admin/Documents/Development/Croco/Croco/Croco/Resource");
 #endif
     
+    //test
+    
 	//screen center
     CCSize size = CCDirector::sharedDirector()->getWinSize();
 	float x = size.width/2;
