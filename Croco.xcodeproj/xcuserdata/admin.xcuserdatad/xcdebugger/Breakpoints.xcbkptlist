@@ -367,5 +367,31 @@
          landmarkName = "GroupCustomization::GroupCustomization(int GameMode)"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/CrocoBoardGame.cpp"
+         timestampString = "366919703.143652"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
+         landmarkName = "ActionLayer::ActionLayer(int GameMode, std::string *RedName, std::string *GreenName, std::string *BlueName, std::string *YellowName)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/dbword.cpp"
+         timestampString = "366920141.497561"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "DBWord::getWord(int CardDigit, const char* Activity)"
+         landmarkType = "5">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

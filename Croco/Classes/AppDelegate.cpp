@@ -90,6 +90,14 @@ bool AppDelegate::applicationDidFinishLaunching()
 	pS_MainMenuScene->addChild(pL_MainMenu,0);
 	pL_MainMenu->release();
     */
+    
+    //detect retina
+    CCSize size = CCDirector::sharedDirector()->getWinSize();
+	if (size.width||size.height==2048)
+    {
+        CCDirector::sharedDirector()->enableRetinaDisplay(true);
+    }
+        
     CCScene* pS_TextureCacheScene = CCScene::node();
 	CCLayer* pL_TextureCacheLayer = new TextureCacheLayer();
 	pS_TextureCacheScene->addChild(pL_TextureCacheLayer,0);

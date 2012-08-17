@@ -10,6 +10,9 @@
 		8402122A15B7457900E2603C /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8402122915B7457900E2603C /* fonts */; };
 		8402122D15B747EF00E2603C /* TextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8402122B15B747EF00E2603C /* TextureCache.cpp */; };
 		840CCCB515A72CD100306FC1 /* VKConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CCCB415A72CD100306FC1 /* VKConnectViewController.m */; };
+		842F052515DEA31A00ACD8DD /* icon-hhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 842F052415DEA31A00ACD8DD /* icon-hhd.png */; };
+		842F052B15DEBDDF00ACD8DD /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 842F052A15DEBDDF00ACD8DD /* fonts */; };
+		842F053115DEC3BD00ACD8DD /* cards.xml in Resources */ = {isa = PBXBuildFile; fileRef = 842F053015DEC3BD00ACD8DD /* cards.xml */; };
 		847D952915A89DB8008E7869 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847D952815A89DB8008E7869 /* Twitter.framework */; };
 		847D953015A89DCF008E7869 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847D952F15A89DCF008E7869 /* Accounts.framework */; };
 		847D953815A8E900008E7869 /* SN_icons in Resources */ = {isa = PBXBuildFile; fileRef = 847D953715A8E900008E7869 /* SN_icons */; };
@@ -18,13 +21,9 @@
 		8485D23D158A75DA00FE2C7C /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8485D23C158A75DA00FE2C7C /* libfacebook_ios_sdk.a */; };
 		8485D23F158A75F600FE2C7C /* facebook-ios-sdk in Resources */ = {isa = PBXBuildFile; fileRef = 8485D23E158A75F600FE2C7C /* facebook-ios-sdk */; };
 		8485D242158A76FD00FE2C7C /* FBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485D241158A76FD00FE2C7C /* FBC.m */; };
-		8499FA6B157B96970098D4F7 /* ~cards.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA2D157B96970098D4F7 /* ~cards.xml */; };
 		8499FA6C157B96970098D4F7 /* anim in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA2E157B96970098D4F7 /* anim */; };
 		8499FA6D157B96970098D4F7 /* c_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA2F157B96970098D4F7 /* c_big.png */; };
-		8499FA78157B96970098D4F7 /* cards.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA3A157B96970098D4F7 /* cards.xml */; };
-		8499FA79157B96970098D4F7 /* cards.xsd in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA3B157B96970098D4F7 /* cards.xsd */; };
 		8499FA7C157B96970098D4F7 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA3E157B96970098D4F7 /* desk.png */; };
-		8499FA7D157B96970098D4F7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA3F157B96970098D4F7 /* fonts */; };
 		8499FA7E157B96970098D4F7 /* GameMenu in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA40157B96970098D4F7 /* GameMenu */; };
 		8499FA7F157B96970098D4F7 /* GroupCustomization in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA41157B96970098D4F7 /* GroupCustomization */; };
 		8499FA8C157B96970098D4F7 /* MainMenu in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA4E157B96970098D4F7 /* MainMenu */; };
@@ -183,6 +182,9 @@
 		8402122C15B747EF00E2603C /* TextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureCache.h; path = Classes/TextureCache.h; sourceTree = "<group>"; };
 		840CCCB315A72CD100306FC1 /* VKConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKConnectViewController.h; path = Classes/VKConnectViewController.h; sourceTree = "<group>"; };
 		840CCCB415A72CD100306FC1 /* VKConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKConnectViewController.m; path = Classes/VKConnectViewController.m; sourceTree = "<group>"; };
+		842F052415DEA31A00ACD8DD /* icon-hhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-hhd.png"; sourceTree = "<group>"; };
+		842F052A15DEBDDF00ACD8DD /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = Resource/fonts; sourceTree = "<group>"; };
+		842F053015DEC3BD00ACD8DD /* cards.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = cards.xml; path = Resource/cards.xml; sourceTree = "<group>"; };
 		847D952815A89DB8008E7869 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		847D952F15A89DCF008E7869 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		847D953715A8E900008E7869 /* SN_icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SN_icons; path = Resource/SN_icons; sourceTree = "<group>"; };
@@ -193,13 +195,9 @@
 		8485D23E158A75F600FE2C7C /* facebook-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "facebook-ios-sdk"; sourceTree = "<group>"; };
 		8485D240158A76FD00FE2C7C /* FBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBC.h; path = Classes/FBC.h; sourceTree = "<group>"; };
 		8485D241158A76FD00FE2C7C /* FBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBC.m; path = Classes/FBC.m; sourceTree = "<group>"; };
-		8499FA2D157B96970098D4F7 /* ~cards.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "~cards.xml"; path = "Resource/~cards.xml"; sourceTree = "<group>"; };
 		8499FA2E157B96970098D4F7 /* anim */ = {isa = PBXFileReference; lastKnownFileType = folder; name = anim; path = Resource/anim; sourceTree = "<group>"; };
 		8499FA2F157B96970098D4F7 /* c_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = c_big.png; path = Resource/c_big.png; sourceTree = "<group>"; };
-		8499FA3A157B96970098D4F7 /* cards.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = cards.xml; path = Resource/cards.xml; sourceTree = "<group>"; };
-		8499FA3B157B96970098D4F7 /* cards.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = cards.xsd; path = Resource/cards.xsd; sourceTree = "<group>"; };
 		8499FA3E157B96970098D4F7 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = Resource/desk.png; sourceTree = "<group>"; };
-		8499FA3F157B96970098D4F7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = Resource/fonts; sourceTree = "<group>"; };
 		8499FA40157B96970098D4F7 /* GameMenu */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GameMenu; path = Resource/GameMenu; sourceTree = "<group>"; };
 		8499FA41157B96970098D4F7 /* GroupCustomization */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GroupCustomization; path = Resource/GroupCustomization; sourceTree = "<group>"; };
 		8499FA4E157B96970098D4F7 /* MainMenu */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MainMenu; path = Resource/MainMenu; sourceTree = "<group>"; };
@@ -537,6 +535,7 @@
 		84DC208B157B94DB003F6617 = {
 			isa = PBXGroup;
 			children = (
+				842F052415DEA31A00ACD8DD /* icon-hhd.png */,
 				847D952F15A89DCF008E7869 /* Accounts.framework */,
 				847D952815A89DB8008E7869 /* Twitter.framework */,
 				8485D23C158A75DA00FE2C7C /* libfacebook_ios_sdk.a */,
@@ -585,15 +584,13 @@
 		84DC20AB157B94DB003F6617 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				842F053015DEC3BD00ACD8DD /* cards.xml */,
+				842F052A15DEBDDF00ACD8DD /* fonts */,
 				8402122915B7457900E2603C /* fonts */,
 				847D953715A8E900008E7869 /* SN_icons */,
-				8499FA2D157B96970098D4F7 /* ~cards.xml */,
 				8499FA2E157B96970098D4F7 /* anim */,
 				8499FA2F157B96970098D4F7 /* c_big.png */,
-				8499FA3A157B96970098D4F7 /* cards.xml */,
-				8499FA3B157B96970098D4F7 /* cards.xsd */,
 				8499FA3E157B96970098D4F7 /* desk.png */,
-				8499FA3F157B96970098D4F7 /* fonts */,
 				8499FA40157B96970098D4F7 /* GameMenu */,
 				8499FA41157B96970098D4F7 /* GroupCustomization */,
 				8499FA4E157B96970098D4F7 /* MainMenu */,
@@ -1225,13 +1222,9 @@
 				84DC20BD157B94DB003F6617 /* Icon.png in Resources */,
 				84DC20BF157B94DB003F6617 /* Icon@2x.png in Resources */,
 				84DC20C2157B94DB003F6617 /* iTunesArtwork in Resources */,
-				8499FA6B157B96970098D4F7 /* ~cards.xml in Resources */,
 				8499FA6C157B96970098D4F7 /* anim in Resources */,
 				8499FA6D157B96970098D4F7 /* c_big.png in Resources */,
-				8499FA78157B96970098D4F7 /* cards.xml in Resources */,
-				8499FA79157B96970098D4F7 /* cards.xsd in Resources */,
 				8499FA7C157B96970098D4F7 /* desk.png in Resources */,
-				8499FA7D157B96970098D4F7 /* fonts in Resources */,
 				8499FA7E157B96970098D4F7 /* GameMenu in Resources */,
 				8499FA7F157B96970098D4F7 /* GroupCustomization in Resources */,
 				8499FA8C157B96970098D4F7 /* MainMenu in Resources */,
@@ -1249,6 +1242,9 @@
 				8485D23F158A75F600FE2C7C /* facebook-ios-sdk in Resources */,
 				847D953815A8E900008E7869 /* SN_icons in Resources */,
 				8402122A15B7457900E2603C /* fonts in Resources */,
+				842F052515DEA31A00ACD8DD /* icon-hhd.png in Resources */,
+				842F052B15DEBDDF00ACD8DD /* fonts in Resources */,
+				842F053115DEC3BD00ACD8DD /* cards.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

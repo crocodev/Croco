@@ -46,12 +46,6 @@ static AppDelegate s_sharedApplication;
 
     [[UIApplication sharedApplication] setStatusBarHidden: YES];
 
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
-        ([UIScreen mainScreen].scale == 2.0)) {
-        // Retina display
-        #define RETINA
-        }
-    
     cocos2d::CCApplication::sharedApplication().run();
         
     return YES;
