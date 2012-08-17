@@ -77,11 +77,6 @@ ActionLayer::ActionLayer()
 
 ActionLayer::ActionLayer(int GameMode, std::string *RedName, std::string *GreenName, std::string *BlueName, std::string *YellowName)
 {
-#ifdef RETINA
-#define RETINA_K 2
-#else
-#define RETINA_K 1
-#endif
     dbw = new DBWord("cards.xml");
 
 	//game mode
@@ -101,14 +96,14 @@ ActionLayer::ActionLayer(int GameMode, std::string *RedName, std::string *GreenN
 
 	//init tokens
 	//numGroupsInGame
-    #define R_X         835.0*RETINA_K
-    #define R_Y         690.0*RETINA_K
-    #define G_X         870.0*RETINA_K
-    #define G_Y         630.0*RETINA_K
-    #define B_X         915.0*RETINA_K
-    #define B_Y         690.0*RETINA_K
-    #define Y_X         951.0*RETINA_K
-    #define Y_Y         630.0*RETINA_K
+    #define R_X         835.0
+    #define R_Y         690.0
+    #define G_X         870.0
+    #define G_Y         630.0
+    #define B_X         915.0
+    #define B_Y         690.0
+    #define Y_X         951.0
+    #define Y_Y         630.0
 	switch(m_GameMode)
 	{
 		case GAMERS_3:	
@@ -234,14 +229,13 @@ ActionLayer::ActionLayer(int GameMode, std::string *RedName, std::string *GreenN
 	//»ÌËˆË‡ÎËÁ‡ˆËˇ Ú‡·ÎËˆ˚
 	for(int i=0;i<TABLEMAX;i++)
 		{
-			tbl[i] = new CellTable(i,mtx[i][0]*RETINA_K,mtx[i][1]*RETINA_K,actions[i],0);
+			tbl[i] = new CellTable(i,mtx[i][0],mtx[i][1],actions[i],0);
 		}
 
 	//tbl[0]->ChangeCellF(15);
 
 	//Игровое поле
-	const char* fDesk=_desk;
-	CCSprite* sDesk=CCSprite::spriteWithFile(fDesk);
+	CCSprite* sDesk=CCSprite::spriteWithFile(_desk);
 	addChild(sDesk,0);
 	sDesk->setPosition(CCPointMake(x,y));
 
@@ -250,9 +244,9 @@ ActionLayer::ActionLayer(int GameMode, std::string *RedName, std::string *GreenN
 	CCMenuItemImage* itm_gamemenu = CCMenuItemImage::itemFromNormalImage(GameMenu_menu_button,GameMenu_menu_button_a,this, menu_selector(ActionLayer::itm_gamemenuCallback));
 	CCMenuItemImage* itm_forward = CCMenuItemImage::itemFromNormalImage(GameMenu_menu_forward,GameMenu_menu_forward_a,this, menu_selector(ActionLayer::itm_forwardCallback));
 	game_menu = CCMenu::menuWithItems(itm_rewind,itm_gamemenu, itm_forward, NULL);
-	game_menu->alignItemsHorizontallyWithPadding(60*RETINA_K);
+	game_menu->alignItemsHorizontallyWithPadding(60);
 	addChild(game_menu);
-	game_menu->setPosition(ccp(x,18*RETINA_K));
+	game_menu->setPosition(ccp(x,18));
 
 	//TestMenu
 	CCMenuItemFont* item1 = CCMenuItemFont::itemFromString("go 3", this, menu_selector(ActionLayer::Card3Callback));
@@ -1443,7 +1437,7 @@ GameMenuLayer::GameMenuLayer()
 	//desk
 	CCSprite* pS_Menu = CCSprite::spriteWithFile(GameMenu_gamemenu);
 	addChild(pS_Menu,0,ID_GMDESK);
-	pS_Menu->setPosition(ccp(x+1,y+2));
+	pS_Menu->setPosition(ccp(x,y));
 	xs=x-pS_Menu->getContentSizeInPixels().width/2;
 	ys=y-pS_Menu->getContentSizeInPixels().height/2;
 
@@ -1668,7 +1662,7 @@ WinnerMenu::WinnerMenu(ActionLayer* al, int Group)
     const char* wingroup[4] = {"winners/red.png","winners/green.png","winners/blue.png","winners/yellow.png"};
     CCSprite* pS_wingroup = CCSprite::spriteWithFile(wingroup[Group]);
     this->addChild(pS_wingroup,1,ID_WINNERGROUP);
-    pS_wingroup->setPosition(ccp(x,y+150*RETINA_K));
+    pS_wingroup->setPosition(ccp(x,y+150));
     
     CCMenuItemImage* itm_continue = CCMenuItemImage::itemFromNormalImage("winners/btn_continue.png", "winners/btn_continue_a.png", this,menu_selector(WinnerMenu::itm_continueCallback));
     CCMenuItemImage* itm_newgame = CCMenuItemImage::itemFromNormalImage("winners/btn_newgame.png", "winners/btn_newgame_a.png", this,menu_selector(WinnerMenu::itm_newgameCallback));
@@ -1678,7 +1672,7 @@ WinnerMenu::WinnerMenu(ActionLayer* al, int Group)
     p_Menu->alignItemsVerticallyWithPadding(10.0f);
     //check if 1 token in game
     this->addChild(p_Menu);
-    p_Menu->setPosition(ccp(x,y-175*RETINA_K));
+    p_Menu->setPosition(ccp(x,y-175));
 }
 
 void WinnerMenu::itm_continueCallback(CCObject* pSender)

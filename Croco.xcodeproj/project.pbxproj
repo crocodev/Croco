@@ -13,6 +13,7 @@
 		842F052515DEA31A00ACD8DD /* icon-hhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 842F052415DEA31A00ACD8DD /* icon-hhd.png */; };
 		842F052B15DEBDDF00ACD8DD /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 842F052A15DEBDDF00ACD8DD /* fonts */; };
 		842F053115DEC3BD00ACD8DD /* cards.xml in Resources */ = {isa = PBXBuildFile; fileRef = 842F053015DEC3BD00ACD8DD /* cards.xml */; };
+		842F053315DECE6300ACD8DD /* desk-HD.png in Resources */ = {isa = PBXBuildFile; fileRef = 842F053215DECE6300ACD8DD /* desk-HD.png */; };
 		847D952915A89DB8008E7869 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847D952815A89DB8008E7869 /* Twitter.framework */; };
 		847D953015A89DCF008E7869 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847D952F15A89DCF008E7869 /* Accounts.framework */; };
 		847D953815A8E900008E7869 /* SN_icons in Resources */ = {isa = PBXBuildFile; fileRef = 847D953715A8E900008E7869 /* SN_icons */; };
@@ -185,6 +186,7 @@
 		842F052415DEA31A00ACD8DD /* icon-hhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-hhd.png"; sourceTree = "<group>"; };
 		842F052A15DEBDDF00ACD8DD /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = Resource/fonts; sourceTree = "<group>"; };
 		842F053015DEC3BD00ACD8DD /* cards.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = cards.xml; path = Resource/cards.xml; sourceTree = "<group>"; };
+		842F053215DECE6300ACD8DD /* desk-HD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "desk-HD.png"; path = "Resource/desk-HD.png"; sourceTree = "<group>"; };
 		847D952815A89DB8008E7869 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		847D952F15A89DCF008E7869 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		847D953715A8E900008E7869 /* SN_icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SN_icons; path = Resource/SN_icons; sourceTree = "<group>"; };
@@ -591,6 +593,7 @@
 				8499FA2E157B96970098D4F7 /* anim */,
 				8499FA2F157B96970098D4F7 /* c_big.png */,
 				8499FA3E157B96970098D4F7 /* desk.png */,
+				842F053215DECE6300ACD8DD /* desk-HD.png */,
 				8499FA40157B96970098D4F7 /* GameMenu */,
 				8499FA41157B96970098D4F7 /* GroupCustomization */,
 				8499FA4E157B96970098D4F7 /* MainMenu */,
@@ -1245,6 +1248,7 @@
 				842F052515DEA31A00ACD8DD /* icon-hhd.png in Resources */,
 				842F052B15DEBDDF00ACD8DD /* fonts in Resources */,
 				842F053115DEC3BD00ACD8DD /* cards.xml in Resources */,
+				842F053315DECE6300ACD8DD /* desk-HD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
