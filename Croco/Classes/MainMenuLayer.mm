@@ -19,7 +19,7 @@ MainMenuLayer::MainMenuLayer(int isGameStarted)
     CFRelease(resourcesURL);
     
     //chdir(path);
-    chdir("/Users/admin/Documents/Development/Croco/Croco/Croco/Resource");
+    chdir("/Users/admin/Documents/Development/Croco/Croco/Resource");
 #endif
     
 	//screen center

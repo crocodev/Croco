@@ -366,13 +366,13 @@ void ActionLayer::itm_rewindCallback(CCObject* pSender)
 		CGroupsSnapshot oldGs, curGs;
 		snaps.GetSnapshot(curGs);
 		snaps.PopSnapshot(oldGs);		
-		if(chPos = curGs.CompareSnapshots(&oldGs, current_group))
+		if((chPos = curGs.CompareSnapshots(&oldGs, current_group)))
 		{
 			curGroupPtr = &groups[current_group];
 			curGroupPtr->ChangeCurGroupPos(chPos);
 			active_token = tokens[current_group];
 			FMove(active_token, chPos);
-			RewindAnimation(this); //rewind animation			
+			RewindAnimation(this); //rewind animation
 		}
 		else
 			break;
@@ -417,7 +417,7 @@ void ActionLayer::itm_forwardCallback(CCObject* pSender)
 		snaps.PopFSnapshot(newGs);
 		//CGroupsSnapshot oldGs, curGs(groups);
 		//snaps.PopSnapshot(oldGs);
-		if(chPos = curGs.CompareSnapshots(&newGs, current_group))
+		if((chPos = curGs.CompareSnapshots(&newGs, current_group)))
 		{
 			curGroupPtr = &groups[current_group];
 			curGroupPtr->ChangeCurGroupPos(chPos);
