@@ -69,8 +69,11 @@ MainMenuLayer::MainMenuLayer(int isGameStarted)
     token->setAnchorPoint(ccp(1.2,-2));
     token->runAction(CCRepeatForever::actionWithAction((CCActionInterval*)fta));
     
+    //MUSIC
+	//PLAYBGMUSIC(MUSIC_MAIN)
+  
     
-	//Radio
+    //Radio
     /*
 	radio_active = 0;
 	itm_radio = CCMenuItemImage::itemFromNormalImage("MainMenu/radio.png","MainMenu/radio.png",this,menu_selector(MainMenuLayer::itm_radioCallback));
@@ -149,6 +152,8 @@ void MainMenuLayer::RadioOn(int active)
 void MainMenuLayer::itm_ContinueCallback(CCObject* pSender)
 {
 	CCDirector::sharedDirector()->popScene();
+    
+    PLAYEFFECT(_sndButton_plastik)
 }
 void MainMenuLayer::itm_StartCallback(CCObject* pSender)
 {
@@ -158,6 +163,8 @@ void MainMenuLayer::itm_StartCallback(CCObject* pSender)
 	CCScene* s = CCTransitionFade::transitionWithDuration((1.0f), pS_SubMenuScene);
 	pL_SubMenu->release();
 	CCDirector::sharedDirector()->pushScene(s);
+    
+    PLAYEFFECT(_sndButton_plastik)
 }
 
 void MainMenuLayer::itm_CreditsCallback(CCObject* pSender)
@@ -168,6 +175,8 @@ void MainMenuLayer::itm_CreditsCallback(CCObject* pSender)
 	CCScene* s = CCTransitionFade::transitionWithDuration((1.0f), pS_CreditsScene);
 	pL_CreditsLayer->release();
 	CCDirector::sharedDirector()->pushScene(s);
+    
+    PLAYEFFECT(_sndButton_plastik)
 }
 
 void MainMenuLayer::ShowTonesCallback()

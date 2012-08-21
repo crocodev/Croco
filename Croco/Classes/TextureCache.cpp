@@ -112,6 +112,29 @@ TextureCacheLayer::TextureCacheLayer()
     ADDIMAGE(SN_icons_facebook_icon)
     ADDIMAGE(SN_icons_twitter_icon)
     ADDIMAGE(SN_icons_vkontakte_icon)
+    
+    //load music and effects
+    //preload background music and effect
+	ADDBGMUSIC(MUSIC_MAIN)
+	ADDEFFECT(_sndAlert)
+    ADDEFFECT(_sndButton_group)
+    ADDEFFECT(_sndButton_inputname_end)
+    ADDEFFECT(_sndButton_inputname_start)
+    ADDEFFECT(_sndButton_plastik)
+    ADDEFFECT(_sndButton_timer)
+    ADDEFFECT(_sndButton_wood)
+    ADDEFFECT(_sndCamera)
+    ADDEFFECT(_sndCheckcard)
+    ADDEFFECT(_sndForall)
+    ADDEFFECT(_sndMovescreen)
+    ADDEFFECT(_sndSwipe)
+    ADDEFFECT(_sndTimer)
+    ADDEFFECT(_sndToken)
+    ADDEFFECT(_sndVictory)
+    
+    //set default volume
+    SimpleAudioEngine::sharedEngine()->setEffectsVolume(0.5);
+    SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5);
 }
 
 void TextureCacheLayer::loadingCallBack(CCObject *obj)

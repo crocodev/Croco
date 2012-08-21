@@ -3,6 +3,8 @@
 void GroupCustomization::itm_backCallback(CCObject* pSender)
 {
 	CCDirector::sharedDirector()->popScene();
+    
+    PLAYEFFECT(_sndButton_plastik)
 }
 void GroupCustomization::itm_startCallback(CCObject* pSender)
 {
@@ -19,6 +21,8 @@ void GroupCustomization::itm_startCallback(CCObject* pSender)
 	pLayer->release();
 	CCDirector::sharedDirector()->replaceScene(s);
 	}
+    
+    PLAYEFFECT(_sndButton_plastik)
 }
 
 static CCRect getRect(CCNode * pNode)
@@ -60,10 +64,12 @@ void KeyboardNotificationLayer::keyboardWillShow(CCIMEKeyboardNotificationInfo& 
     {
         return;
     }
+    
+    PLAYEFFECT(_sndButton_inputname_start)
 }
 void KeyboardNotificationLayer::keyboardWillHide(CCIMEKeyboardNotificationInfo& info)
 {
-    ;
+    PLAYEFFECT(_sndButton_inputname_end)
 }
 
 // CCLayer function
@@ -422,6 +428,7 @@ void CurrentGroupLayer::setContentAccess(bool state)
 		((CCSprite*)(spr->getChildByTag(ID_STRIPE)))->runAction(CCEaseInOut::actionWithAction((CCActionInterval*)fadetoin->copy()->autorelease(),2.0f));
 		spr->runAction(CCEaseInOut::actionWithAction((CCActionInterval*)scalein->copy()->autorelease(),2.0f));
 		m_isAccessable = true;
+        
 	} else {
 		((CCSprite*)(spr->getChildByTag(ID_TEXTFIELD)))->runAction(CCEaseInOut::actionWithAction((CCActionInterval*)fadetoout->copy()->autorelease(),2.0f));
 		((CCSprite*)(spr->getChildByTag(ID_COLORBOX)))->runAction(CCEaseInOut::actionWithAction((CCActionInterval*)fadetoout->copy()->autorelease(),2.0f));

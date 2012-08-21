@@ -37,18 +37,26 @@ SubMenu::SubMenu(void)
 void SubMenu::itm_3gamersCallback(CCObject* pSender)
 {
 	GoGroupCustomization(GAMERS_3);
+    
+    PLAYEFFECT(_sndButton_group)
 }
 void SubMenu::itm_2groupsCallback(CCObject* pSender)
 {
 	GoGroupCustomization(GROUP_2);
+    
+    PLAYEFFECT(_sndButton_group)
 }
 void SubMenu::itm_3groupsCallback(CCObject* pSender)
 {
 	GoGroupCustomization(GROUP_3);
+    
+    PLAYEFFECT(_sndButton_group)
 }
 void SubMenu::itm_4groupsCallback(CCObject* pSender)
 {
 	GoGroupCustomization(GROUP_4);
+    
+    PLAYEFFECT(_sndButton_group)
 }
 void SubMenu::GoGroupCustomization(int GameMode)
 {
@@ -62,4 +70,6 @@ void SubMenu::GoGroupCustomization(int GameMode)
 void SubMenu::itm_backCallback(CCObject* pSender)
 {
 	CCDirector::sharedDirector()->popScene();
+    
+    PLAYEFFECT(_sndButton_plastik)
 }

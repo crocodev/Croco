@@ -367,6 +367,8 @@ void ActionLayer::itm_rewindCallback(CCObject* pSender)
 			active_token = tokens[current_group];
 			FMove(active_token, chPos);
 			RewindAnimation(this); //rewind animation
+            
+            PLAYEFFECT(_sndButton_wood)
 		}
 		else
 			break;
@@ -384,6 +386,8 @@ void ActionLayer::itm_gamemenuCallback(CCObject* pSender)
 
 	GameMenuLayer* pL_GameMenu = new GameMenuLayer();
 	this->addChild(pL_GameMenu,6, ID_GAMEMENU);
+    
+    PLAYEFFECT(_sndButton_wood)
 }
 void ActionLayer::itm_forwardCallback(CCObject* pSender)
 {
@@ -418,6 +422,8 @@ void ActionLayer::itm_forwardCallback(CCObject* pSender)
 			active_token = tokens[current_group];
 			FMove(active_token, chPos);
 			RewindAnimation(this); //rewind animation
+            
+            PLAYEFFECT(_sndButton_wood)
 		}
 		else
 			break;
@@ -450,7 +456,7 @@ void ActionLayer::ShowHint(int Mode, CCPoint TargetPoint, const char* TextHint)
 	pL_Hint->addChild(pS_Pointer);
 	CCLabelTTF* txt= CCLabelTTF::labelWithString(TextHint,FONT_NAME,22.0f);
 	pL_Hint->addChild(txt);
-	txt->setPosition(ccp(x,y+330-txt->getContentSizeInPixels().height/2));
+	txt->setPosition(ccp(x,y+330-txt->getContentSize().height/2));
 	CCActionInterval* move1;
 
 	float move_distanse=10;
@@ -750,6 +756,8 @@ void ActionLayer::itm_card3Callback(CCObject* pSender)
 	addChild(checked_card,2,CARD_LAYER);
 	checked_card->setPosition(CCPointMake(m_mnCardsX,m_mnCardsY+CARD_HEIGHT+CARD_PADDING));
 	MoveCardFromControl();
+    
+    PLAYEFFECT(_sndCheckcard)
 }
 void ActionLayer::MoveCardFromControl()
 {
@@ -875,6 +883,8 @@ void ActionLayer::itm_card4Callback(CCObject* pSender)
 	addChild(checked_card,2,CARD_LAYER);
 	checked_card->setPosition(CCPointMake(m_mnCardsX,m_mnCardsY));
 	MoveCardFromControl();
+    
+    PLAYEFFECT(_sndCheckcard)
 }
 void ActionLayer::itm_card5Callback(CCObject* pSender)
 {
@@ -884,6 +894,8 @@ void ActionLayer::itm_card5Callback(CCObject* pSender)
 	addChild(checked_card,2,CARD_LAYER);
 	checked_card->setPosition(CCPointMake(m_mnCardsX,m_mnCardsY-CARD_HEIGHT-CARD_PADDING));
 	MoveCardFromControl();
+    
+    PLAYEFFECT(_sndCheckcard)
 }
 
 void ActionLayer::itm_TimerStartCallback(CCObject* pSender)
@@ -891,11 +903,18 @@ void ActionLayer::itm_TimerStartCallback(CCObject* pSender)
 	to1 = CCProgressTo::actionWithDuration(60.0f, 100.0f);
 	lefttime = CCProgressTimer::progressWithFile(Timer_timer_digits_active);
 	lefttime->setType(kCCProgressTimerTypeRadialCW);
-	((CCSprite*)lefttime->getSprite())->setOpacity(150);
+	((CCSprite*)lefttime->getSprite())->setOpacity(100);
 	pL_Timer->addChild(lefttime,2);
 	lefttime->setPosition(ccp(11,-3));
-	lefttime->runAction(CCSequence::actions(CCRepeat::actionWithAction((CCActionInterval*)to1->copy()->autorelease(),60.0f),CCCallFunc::actionWithTarget(this,callfunc_selector(ActionLayer::TimerOver)),NULL));
-	
+    
+    lefttime->runAction(CCRepeat::actionWithAction(
+                                                   CCSequence::actions(
+                                                                       (CCActionInterval*)to1->copy()->autorelease(),
+                                                   CCCallFunc::actionWithTarget(this,callfunc_selector(ActionLayer::TimerOver)),
+                                                   NULL),60.0f));
+    /*
+    lefttime->runAction(CCSequence::actions(CCRepeat::actionWithAction((CCActionInterval*)to1->copy()->autorelease(),60.0f),CCCallFunc::actionWithTarget(this,callfunc_selector(ActionLayer::TimerOver)),NULL));
+	*/
 	setTimerMode(1);
 	//wordaction
 	word->runAction(CCEaseInOut::actionWithAction(CCScaleTo::actionWithDuration(1.5f,-1.0f,1.0f),3.0f));
@@ -907,6 +926,9 @@ void ActionLayer::itm_TimerStartCallback(CCObject* pSender)
         }
     //Нажата кнопка "Старт"
     gamestate = 2;
+    effect_id = PLAYEFFECTRECURSE(_sndTimer)
+    
+    PLAYEFFECT(_sndButton_timer)
 }
 void ActionLayer::itm_TimerPauseCallback(CCObject* pSender)
 {
@@ -920,6 +942,9 @@ void ActionLayer::itm_TimerPauseCallback(CCObject* pSender)
 	    
         //Нажата кнопка "Пауза"
         gamestate = 3;
+        PAUSEEFFECT(effect_id)
+        
+        PLAYEFFECT(_sndButton_timer)
     }
 }
 void ActionLayer::itm_TimerRunCallback(CCObject* pSender)
@@ -931,11 +956,17 @@ void ActionLayer::itm_TimerRunCallback(CCObject* pSender)
     
     //Нажата кнопка "Старт"
     gamestate = 2;
+    RESUMEEFFECT(effect_id)
+    
+    PLAYEFFECT(_sndButton_timer)
 }
 void ActionLayer::TimerOver()
 {
 	setTimerMode(0);
 	lefttime->removeFromParentAndCleanup(1);
+    
+    PLAYEFFECT(_sndAlert)
+    STOPALLEFFECTS
 }
 // case:
 // 0: start, 1: pause, 2: run
@@ -1047,7 +1078,8 @@ void ActionLayer::HideTimer()
 	//stopActions
 	lefttime->removeFromParentAndCleanup(1);
 	setTimerMode(0);
-
+    STOPEFFECT(effect_id)
+    
 	//hide timer
 	CCActionInterval* mov_timer = CCMoveBy::actionWithDuration(1.0f,ccp(-230,0));
 	CCActionInterval* move_timer_eio = (CCActionInterval*)CCEaseInOut::actionWithAction(mov_timer,4.0f);
@@ -1135,6 +1167,8 @@ int ActionLayer::FMoveTroubles(SpriteTokenClass* psF, int h)
 //¬ÓÁÏÓÊÂÌ ıÓ‰ Ì‡ -n
 int ActionLayer::FMoveCor(SpriteTokenClass* ps, int h)
 {
+    PLAYEFFECT(_sndToken)
+    
 	if(!ps)
 		return 0;
 	
@@ -1207,6 +1241,8 @@ int ActionLayer::FMoveCor(SpriteTokenClass* ps, int h)
 //¬ÓÁÏÓÊÂÌ ıÓ‰ Ì‡ -n
 int ActionLayer::FMove(SpriteTokenClass* ps, int h)
 {
+    PLAYEFFECT(_sndToken)
+    
 	/*
 	int n=FMoveTroubles(ps,h);
 
@@ -1414,6 +1450,9 @@ int CGameLogic::FinishGame()
 
     //win
     act->ShowWinners(act->active_token->m_CurNumber);
+    
+    PLAYEFFECT(_sndCamera)
+    
 	return 0;
 }
 
@@ -1438,20 +1477,22 @@ GameMenuLayer::GameMenuLayer()
 	CCSprite* pS_Menu = CCSprite::spriteWithFile(GameMenu_gamemenu);
 	addChild(pS_Menu,0,ID_GMDESK);
 	pS_Menu->setPosition(ccp(x,y));
-	xs=x-pS_Menu->getContentSizeInPixels().width/2;
-	ys=y-pS_Menu->getContentSizeInPixels().height/2;
+	xs=x-pS_Menu->getContentSize().width/2;
+	ys=y-pS_Menu->getContentSize().height/2;
 
 	//swipe
 	endSwipe = 258.0f;
-	xStartPos = xs+110-34;
-	pS_Swipe1 = CCSprite::spriteWithFile(GameMenu_swipe);
+	xStartPos = xs+110-35; //34
+	
+    pS_Swipe1 = CCSprite::spriteWithFile(GameMenu_swipe);
 	pS_Swipe1->setAnchorPoint(ccp(0,0));
 	addChild(pS_Swipe1,1,ID_SWIPE_RESTART);
-	pS_Swipe1->setPosition(ccp(xStartPos,ys+212-27));
-	pS_Swipe2 = CCSprite::spriteWithFile(GameMenu_swipe);
+	pS_Swipe1->setPosition(ccp(xStartPos,ys+184));
+	
+    pS_Swipe2 = CCSprite::spriteWithFile(GameMenu_swipe);
 	pS_Swipe2->setAnchorPoint(ccp(0,0));
 	addChild(pS_Swipe2,1,ID_SWIPE_MAINMENU);
-	pS_Swipe2->setPosition(ccp(xStartPos,ys+141-26));
+	pS_Swipe2->setPosition(ccp(xStartPos,ys+113));
 
 	//unlock animation effect
 	//new game
@@ -1512,8 +1553,8 @@ bool GameMenuLayer::ccTouchBegan(CCTouch *touch, CCEvent *withEvent)
 
 	//hide menu on touch around
 	CCSprite* spr = (CCSprite*)this->getChildByTag(ID_GMDESK);
-	float szx = spr->getContentSizeInPixels().width/2;
-	float szy = spr->getContentSizeInPixels().height/2;
+	float szx = spr->getContentSize().width/2;
+	float szy = spr->getContentSize().height/2;
 	if(touchPoint.x>spr->getPosition().x+szx||touchPoint.x<spr->getPosition().x-szx||touchPoint.y>spr->getPosition().y+szy||touchPoint.y<spr->getPosition().y-szy)
 	{
         //RestoreMenuState();
@@ -1533,9 +1574,9 @@ void GameMenuLayer::ccTouchMoved(CCTouch *touch, CCEvent *withEvent)
 
 	if(checked)
 	{
-		if(touchPoint.y>cex->getPositionInPixels().y+limit||touchPoint.y<cex->getPositionInPixels().y-limit||touchPoint.x<xStartPos-limit||touchPoint.x>xStartPos+endSwipe-cex->getContentSize().width+limit)
+		if(touchPoint.y>cex->getPosition().y+limit||touchPoint.y<cex->getPosition().y-limit||touchPoint.x<xStartPos-limit||touchPoint.x>xStartPos+endSwipe-cex->getContentSize().width+limit)
 		{
-			CCFiniteTimeAction* actionMoveRet = CCMoveTo::actionWithDuration( (ccTime)0.1, ccp(xStartPos, cex->getPositionInPixels().y) );
+			CCFiniteTimeAction* actionMoveRet = CCMoveTo::actionWithDuration( (ccTime)0.1, ccp(xStartPos, cex->getPosition().y) );
 			cex->runAction( CCSequence::actions(actionMoveRet, /*actionMoveDone,*/ NULL) );
 			cel->runAction(CCFadeIn::actionWithDuration(0.2f));
 			checked=false;
@@ -1545,19 +1586,19 @@ void GameMenuLayer::ccTouchMoved(CCTouch *touch, CCEvent *withEvent)
 		if(touchPoint.x-xdelta<xStartPos+endSwipe-cex->getContentSize().width)
 			if(touchPoint.x-xdelta>=xStartPos)
 			{
-			cex->setPosition(ccp(touchPoint.x-xdelta,cex->getPositionInPixels().y));
+			cex->setPosition(ccp(touchPoint.x-xdelta,cex->getPosition().y));
 			//change opacity
-			if(cex->getPositionInPixels().x-xStartPos<endSwipe/7) 
-				cel->setOpacity(255-255*((cex->getPositionInPixels().x-xStartPos)/(endSwipe/7)));
+			if(cex->getPosition().x-xStartPos<endSwipe/7)
+				cel->setOpacity(255-255*((cex->getPosition().x-xStartPos)/(endSwipe/7)));
 			}
 			else
 			{
-				CCFiniteTimeAction* actionMove = CCMoveTo::actionWithDuration((ccTime)0.1, ccp(xStartPos, cex->getPositionInPixels().y));
+				CCFiniteTimeAction* actionMove = CCMoveTo::actionWithDuration((ccTime)0.1, ccp(xStartPos, cex->getPosition().y));
 				cex->runAction( CCSequence::actions(actionMove,/*actionMoveDone,*/NULL) );
 			}
 		else
 		{
-			CCFiniteTimeAction* actionMove1 = CCMoveTo::actionWithDuration((ccTime)0.1, ccp(xStartPos+endSwipe-cex->getContentSize().width, cex->getPositionInPixels().y));
+			CCFiniteTimeAction* actionMove1 = CCMoveTo::actionWithDuration((ccTime)0.1, ccp(xStartPos+endSwipe-cex->getContentSize().width, cex->getPosition().y));
 			cex->runAction( CCSequence::actions(actionMove1,/*actionMoveDone,*/NULL) );
 		}
 	}
@@ -1583,6 +1624,8 @@ void GameMenuLayer::ccTouchEnded(CCTouch *touch, CCEvent *withEvent)
 				CCScene* s = CCTransitionFade::transitionWithDuration((1.0f), pS_Scene);
 				pL_Restart->release();
 				CCDirector::sharedDirector()->replaceScene(s);
+                
+                PLAYEFFECT(_sndSwipe)
 			}
 			if(tag==ID_SWIPE_MAINMENU)
 			{
@@ -1597,13 +1640,15 @@ void GameMenuLayer::ccTouchEnded(CCTouch *touch, CCEvent *withEvent)
 				pL_MainMenu->release();
 				//CCScene* s = CCTransitionFade::transitionWithDuration((1.2f), pS_MainMenuScene);
 				CCDirector::sharedDirector()->pushScene(pS_MainMenuScene);
+                
+                PLAYEFFECT(_sndSwipe)
 			}
 	}
 	else
 	{
 		if(!checked)
 			return;
-		CCFiniteTimeAction* actionMove = CCMoveTo::actionWithDuration( (ccTime)0.1, ccp(xStartPos, cex->getPositionInPixels().y) );
+		CCFiniteTimeAction* actionMove = CCMoveTo::actionWithDuration( (ccTime)0.1, ccp(xStartPos, cex->getPosition().y) );
 		cex->runAction( CCSequence::actions(actionMove, /*actionMoveDone,*/ NULL) );
 		cel->runAction(CCFadeIn::actionWithDuration(0.2f));
 	}
