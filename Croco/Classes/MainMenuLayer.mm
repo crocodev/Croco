@@ -22,7 +22,7 @@ MainMenuLayer::MainMenuLayer(int isGameStarted)
     //chdir("/Users/totrin/Downloads/asnikitin-Croco-913f24d/Croco/Resource");
     //chdir("/Users/admin/Documents/Development/Croco/Croco/Resource");
 #endif
-    
+    //hui
 	//screen center
     CCSize size = CCDirector::sharedDirector()->getWinSize();
 	float x = size.width/2;
