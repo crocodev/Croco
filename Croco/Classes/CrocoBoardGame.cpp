@@ -380,9 +380,9 @@ void ActionLayer::itm_gamemenuCallback(CCObject* pSender)
 {
     SaveMenuState();
 	CCLayerColor* lc = CCLayerColor::node();
-	lc->setOpacity(0);
+	lc->setOpacity(165.0f);
 	addChild(lc,5,ID_SHADOWLAYER);
-	lc->runAction(CCEaseIn::actionWithAction(CCFadeTo::actionWithDuration(0.4f,165),0.8f));
+	//lc->runAction(CCEaseIn::actionWithAction(CCFadeTo::actionWithDuration(0.4f,165),0.8f));
 
 	GameMenuLayer* pL_GameMenu = new GameMenuLayer();
 	this->addChild(pL_GameMenu,6, ID_GAMEMENU);
@@ -964,9 +964,9 @@ void ActionLayer::TimerOver()
 {
 	setTimerMode(0);
 	lefttime->removeFromParentAndCleanup(1);
-    
-    PLAYEFFECT(_sndAlert)
     STOPALLEFFECTS
+    PLAYEFFECT(_sndAlert)
+    
 }
 // case:
 // 0: start, 1: pause, 2: run
@@ -1167,8 +1167,6 @@ int ActionLayer::FMoveTroubles(SpriteTokenClass* psF, int h)
 //¬ÓÁÏÓÊÂÌ ıÓ‰ Ì‡ -n
 int ActionLayer::FMoveCor(SpriteTokenClass* ps, int h)
 {
-    PLAYEFFECT(_sndToken)
-    
 	if(!ps)
 		return 0;
 	
@@ -1230,7 +1228,7 @@ int ActionLayer::FMoveCor(SpriteTokenClass* ps, int h)
 	ps->pS_F->runAction(
 		CCSequence::actions(
 		CCDelayTime::actionWithDuration(0.8f),
-		CCEaseIn::actionWithAction((CCActionInterval*)ScaleIn->reverse(),3.0f),NULL));
+		CCEaseIn::actionWithAction((CCActionInterval*)ScaleIn->reverse(),3.0f),CCCallFunc::actionWithTarget(this,callfunc_selector(ActionLayer::PlayTokenEffectCallback)),NULL));
 
 	
 	ps->setCurrentPos(currentPos+h);	
@@ -1241,8 +1239,6 @@ int ActionLayer::FMoveCor(SpriteTokenClass* ps, int h)
 //¬ÓÁÏÓÊÂÌ ıÓ‰ Ì‡ -n
 int ActionLayer::FMove(SpriteTokenClass* ps, int h)
 {
-    PLAYEFFECT(_sndToken)
-    
 	/*
 	int n=FMoveTroubles(ps,h);
 
@@ -1293,12 +1289,17 @@ int ActionLayer::FMove(SpriteTokenClass* ps, int h)
 	ps->pS_F->runAction(
 		CCSequence::actions(
 		CCDelayTime::actionWithDuration(0.8f),
-		CCEaseIn::actionWithAction((CCActionInterval*)ScaleIn->reverse(),3.0f),NULL));
+		CCEaseIn::actionWithAction((CCActionInterval*)ScaleIn->reverse(),3.0f),CCCallFunc::actionWithTarget(this,callfunc_selector(ActionLayer::PlayTokenEffectCallback)),NULL));
 
 	ps->setCurrentPos(currentPos+h);
 	tbl[currentPos]->ChangeCellF(ps->pS_F->getTag());
 	tbl[currentPos+h]->ChangeCellF(ps->pS_F->getTag());
 	return 1;
+}
+
+void ActionLayer::PlayTokenEffectCallback()
+{
+    PLAYEFFECT(_sndToken)
 }
 
 SpriteTokenClass* ActionLayer::GetTokenByTag(int Tag)
@@ -1496,13 +1497,14 @@ GameMenuLayer::GameMenuLayer()
 
 	//unlock animation effect
 	//new game
-    ccColor3B clr = ccc3(23,36,45);
-	//CCLabelTTF* label = CCLabelTTF::labelWithString("Начать сначала",FONT_NAME,22.0f);
-    CCLabelBMFont* label = CCLabelBMFont::labelWithString("New game","fonts/Minion_32.fnt");
+    ccColor3B clr = ccc3(46,20,0);
+	CCLabelTTF* label = CCLabelTTF::labelWithString("Начать сначала",FONT_NAME,22.0f);
+    //CCLabelBMFont* label = CCLabelBMFont::labelWithString("New game","fonts/Minion_32.fnt");
 	addChild(label,0,ID_TEXT_RESTART);
 	label->setPosition(ccp(xs+225,ys+212));
 	label->setColor(clr);
-	CCSprite* chars[255];
+	//CCSprite* chars[255];
+    /*
     for(int j=0;j<label->getChildrenCount();j++)
 	{
 		chars[j] = (CCSprite*)label->getChildByTag(j);
@@ -1512,15 +1514,17 @@ GameMenuLayer::GameMenuLayer()
 			CCSequence::actions(CCDelayTime::actionWithDuration((label->getChildrenCount()-j)*0.1f)),
 			NULL))
 			);
-	}	
+	}
+     */
 	//Main menu
-	//CCLabelTTF* label2 = CCLabelTTF::labelWithString("Главное меню",FONT_NAME,22.0f);
-    CCLabelBMFont* label2 = CCLabelBMFont::labelWithString("Main Menu","fonts/Minion_32.fnt");
+	CCLabelTTF* label2 = CCLabelTTF::labelWithString("Главное меню",FONT_NAME,22.0f);
+    //CCLabelBMFont* label2 = CCLabelBMFont::labelWithString("Main Menu","fonts/Minion_32.fnt");
 	addChild(label2,0,ID_TEXT_MAINMENU);
 	label2->setPosition(ccp(xs+225,ys+141));
 	label2->setColor(clr);
-	CCSprite* chars2[255];
-	for(int j=0;j<label2->getChildrenCount();j++)
+	//CCSprite* chars2[255];
+	/*
+    for(int j=0;j<label2->getChildrenCount();j++)
 	{
 		chars2[j] = (CCSprite*)label2->getChildByTag(j);
 		chars2[j]->runAction(CCRepeatForever::actionWithAction((CCActionInterval*)
@@ -1530,7 +1534,7 @@ GameMenuLayer::GameMenuLayer()
 			NULL))
 			);
 	}	
-	
+	*/
 	//buttons
 	CCSprite* pS_buttonSound = CCSprite::spriteWithFile(GameMenu_sound);
 	addChild(pS_buttonSound);
@@ -1549,6 +1553,9 @@ bool GameMenuLayer::ccTouchBegan(CCTouch *touch, CCEvent *withEvent)
 	{
 		checked = true;	
 		xdelta=touchPoint.x-cex->getPosition().x;
+        
+        //fade out text on swipe
+        cel->runAction(CCFadeOut::actionWithDuration(0.2f));
 	}
 
 	//hide menu on touch around
@@ -1570,26 +1577,26 @@ void GameMenuLayer::ccTouchMoved(CCTouch *touch, CCEvent *withEvent)
 	CCPoint touchPoint = touch->locationInView(touch->view());
 	touchPoint = CCDirector::sharedDirector()->convertToGL(touchPoint);
 
+    //лимит удаления пальца от контрола
 	float limit = 200.0f;
 
 	if(checked)
 	{
+        //проверка на лимит
 		if(touchPoint.y>cex->getPosition().y+limit||touchPoint.y<cex->getPosition().y-limit||touchPoint.x<xStartPos-limit||touchPoint.x>xStartPos+endSwipe-cex->getContentSize().width+limit)
 		{
-			CCFiniteTimeAction* actionMoveRet = CCMoveTo::actionWithDuration( (ccTime)0.1, ccp(xStartPos, cex->getPosition().y) );
+			CCFiniteTimeAction* actionMoveRet = CCMoveTo::actionWithDuration(0.1f, ccp(xStartPos, cex->getPosition().y) );
 			cex->runAction( CCSequence::actions(actionMoveRet, /*actionMoveDone,*/ NULL) );
 			cel->runAction(CCFadeIn::actionWithDuration(0.2f));
 			checked=false;
 			return;
 		}
 
+        //действие с надписью
 		if(touchPoint.x-xdelta<xStartPos+endSwipe-cex->getContentSize().width)
 			if(touchPoint.x-xdelta>=xStartPos)
 			{
 			cex->setPosition(ccp(touchPoint.x-xdelta,cex->getPosition().y));
-			//change opacity
-			if(cex->getPosition().x-xStartPos<endSwipe/7)
-				cel->setOpacity(255-255*((cex->getPosition().x-xStartPos)/(endSwipe/7)));
 			}
 			else
 			{
@@ -1598,7 +1605,7 @@ void GameMenuLayer::ccTouchMoved(CCTouch *touch, CCEvent *withEvent)
 			}
 		else
 		{
-			CCFiniteTimeAction* actionMove1 = CCMoveTo::actionWithDuration((ccTime)0.1, ccp(xStartPos+endSwipe-cex->getContentSize().width, cex->getPosition().y));
+			CCFiniteTimeAction* actionMove1 = CCMoveTo::actionWithDuration(0.1f, ccp(xStartPos+endSwipe-cex->getContentSize().width, cex->getPosition().y));
 			cex->runAction( CCSequence::actions(actionMove1,/*actionMoveDone,*/NULL) );
 		}
 	}
@@ -1661,7 +1668,7 @@ bool GameMenuLayer::CheckPoint(CCPoint cp)
 	if(cp.x > pS_Swipe1->getPositionX() - d && cp.x < pS_Swipe1->getPositionX()+pS_Swipe1->getContentSize().width + d)
 		if(cp.y > pS_Swipe1->getPositionY() - d && cp.y < pS_Swipe1->getPositionY()+pS_Swipe1->getContentSize().height + d)
 		{
-			cel = (CCLabelBMFont*)this->getChildByTag(ID_TEXT_RESTART);
+			cel = (CCLabelTTF*)this->getChildByTag(ID_TEXT_RESTART);
 			cex = pS_Swipe1;
 			return true;
 		}
@@ -1669,7 +1676,7 @@ bool GameMenuLayer::CheckPoint(CCPoint cp)
 	if (cp.x > pS_Swipe2->getPositionX() - d && cp.x < pS_Swipe2->getPositionX()+pS_Swipe2->getContentSize().width + d)
 		if (cp.y > pS_Swipe2->getPositionY() - d && cp.y < pS_Swipe2->getPositionY()+pS_Swipe2->getContentSize().height + d)
 		{
-			cel = (CCLabelBMFont*)this->getChildByTag(ID_TEXT_MAINMENU);
+			cel = (CCLabelTTF*)this->getChildByTag(ID_TEXT_MAINMENU);
 			cex = pS_Swipe2;
 			return true;
 		}
@@ -1681,9 +1688,9 @@ void ActionLayer::ShowWinners(int Group)
 {
     SaveMenuState();
 	CCLayerColor* lc = CCLayerColor::node();
-	lc->setOpacity(0);
+	lc->setOpacity(165.0f);
 	addChild(lc,5,ID_SHADOWLAYER);
-	lc->runAction(CCEaseIn::actionWithAction(CCFadeTo::actionWithDuration(0.4f,165),0.8f));
+	//lc->runAction(CCEaseIn::actionWithAction(CCFadeTo::actionWithDuration(0.4f,165),0.8f));
     
 	WinnerMenu* pL_WinnerMenu = new WinnerMenu(this, Group);
 	this->addChild(pL_WinnerMenu,6,ID_WINNERMENU);

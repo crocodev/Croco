@@ -18,8 +18,9 @@ MainMenuLayer::MainMenuLayer(int isGameStarted)
     }
     CFRelease(resourcesURL);
     
-    //chdir(path);
-    chdir("/Users/admin/Documents/Development/Croco/Croco/Resource");
+    chdir(path);
+    //chdir("/Users/totrin/Downloads/asnikitin-Croco-913f24d/Croco/Resource");
+    //chdir("/Users/admin/Documents/Development/Croco/Croco/Resource");
 #endif
     
 	//screen center

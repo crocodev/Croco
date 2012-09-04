@@ -157,15 +157,15 @@ class ActionLayer;
 #define _sndButton_inputname_end	"music/sndButton_inputname-end.wav"
 #define _sndButton_inputname_start	"music/sndButton_inputname-start.wav"
 #define _sndButton_plastik          "music/sndButton_plastik.mp3"
-#define _sndButton_timer            "music/sndButton_timer.wav"
+#define _sndButton_timer            "music/sndButton_timer.mp3"
 #define _sndButton_wood             "music/sndButton_wood.mp3"
 #define _sndCamera                  "music/sndCamera.wav"
-#define _sndCheckcard               "music/sndCheckcard.wav"
+#define _sndCheckcard               "music/sndCheckcard.mp3"
 #define _sndForall                  "music/sndForall.mp3"
 #define _sndMovescreen              "music/sndMovescreen.wav"
-#define _sndSwipe                   "music/sndSwipe.wav"
-#define _sndTimer                   "music/sndTimer.WAV"
-#define _sndToken                   "music/sndToken.wav"
+#define _sndSwipe                   "music/sndSwipe.mp3"
+#define _sndTimer                   "music/sndTimer.mp3"
+#define _sndToken                   "music/sndToken.mp3"
 #define _sndVictory                 "music/sndVictory.wav"
 
 //Положение источника света
@@ -293,7 +293,7 @@ private:
 	bool checked;
 
 	CCSprite * cex;
-	CCLabelBMFont* cel;
+	CCLabelTTF* cel;
 	CCSprite* pS_Swipe1;
 	CCSprite* pS_Swipe2;
 	int startSwipe;
@@ -357,6 +357,7 @@ public:
 	int FMove(SpriteTokenClass* st, int h);
 	int FMoveCor(SpriteTokenClass* st, int h);
 	SpriteTokenClass* GetTokenByTag(int Tag);
+    void PlayTokenEffectCallback();
 
 	//??
 	CCSprite* checked_card;
