@@ -1445,6 +1445,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: serge carter (97386GUZDZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: serge carter (97386GUZDZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1469,6 +1471,8 @@
 					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "96952DAD-3031-45C9-8619-CA66ED190BCC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "96952DAD-3031-45C9-8619-CA66ED190BCC";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -1479,6 +1483,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SERGEI KOZLOV";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SERGEI KOZLOV";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Croco/Prefix.pch;
@@ -1502,6 +1508,8 @@
 					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
