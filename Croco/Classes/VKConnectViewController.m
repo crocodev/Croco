@@ -84,7 +84,7 @@
         
         [self Post:(NSString*)[[NSUserDefaults standardUserDefaults] objectForKey:@"VKAccessToken"]];
         
-        //NSLog(@"webview response: %@",[[[webView request] URL] absoluteString]);
+        NSLog(@"webview response: %@",[[[webView request] URL] absoluteString]);
         [self dismissModalViewControllerAnimated:YES];
     } else if ([webview.request.URL.absoluteString rangeOfString:@"error"].location != NSNotFound) {
         NSLog(@"Error: %@", webview.request.URL.absoluteString);

@@ -1460,7 +1460,7 @@
 					"$(PROJECT_NAME)/facebook-ios-sdk",
 				);
 				INFOPLIST_FILE = Croco/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Croco/facebook-ios-sdk\"",
@@ -1497,7 +1497,7 @@
 					"$(PROJECT_NAME)/facebook-ios-sdk",
 				);
 				INFOPLIST_FILE = Croco/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Croco/facebook-ios-sdk\"",
