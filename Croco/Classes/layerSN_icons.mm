@@ -14,12 +14,12 @@ layerSN_icons::layerSN_icons()
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
     CCMenuItemImage *itm_Tw = CCMenuItemImage::itemFromNormalImage(SN_icons_twitter_icon,SN_icons_twitter_icon,this,menu_selector(layerSN_icons::itm_TwCallback));
-    CCMenuItemImage *itm_Fb = CCMenuItemImage::itemFromNormalImage(SN_icons_facebook_icon,SN_icons_facebook_icon,this,menu_selector(layerSN_icons::itm_FbCallback));
+    //CCMenuItemImage *itm_Fb = CCMenuItemImage::itemFromNormalImage(SN_icons_facebook_icon,SN_icons_facebook_icon,this,menu_selector(layerSN_icons::itm_FbCallback));
     CCMenuItemImage *itm_Vk = CCMenuItemImage::itemFromNormalImage(SN_icons_vkontakte_icon,SN_icons_vkontakte_icon,this,menu_selector(layerSN_icons::itm_VkCallback));
-    CCMenu *mnSN_icons = CCMenu::menuWithItems(itm_Tw,itm_Fb,itm_Vk,NULL);
-    mnSN_icons->alignItemsHorizontallyWithPadding(size.width/24);
-    addChild(mnSN_icons);
-    mnSN_icons->setPosition(ccp(size.width*3/4,size.height/16));
+    //CCMenu *mnSN_icons = CCMenu::menuWithItems(itm_Tw,itm_Fb,itm_Vk,NULL);
+    //mnSN_icons->alignItemsHorizontallyWithPadding(size.width/24);
+    //addChild(mnSN_icons);
+    //mnSN_icons->setPosition(ccp(size.width*3/4,size.height/16));
 }
 
 layerSN_icons::~layerSN_icons()
@@ -65,12 +65,12 @@ void layerSN_icons::itm_TwCallback(CCObject* pSender)
 	}];
 }
 
-void layerSN_icons::itm_FbCallback(CCObject* pSender)
+/*void layerSN_icons::itm_FbCallback(CCObject* pSender)
 {
     //Facebook
      FBC *pFBC = [[FBC alloc] init];
      [pFBC FBExec];
-}
+}*/
 
 void layerSN_icons::itm_VkCallback(CCObject* pSender)
 {

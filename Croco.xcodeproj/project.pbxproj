@@ -19,9 +19,6 @@
 		847D953815A8E900008E7869 /* SN_icons in Resources */ = {isa = PBXBuildFile; fileRef = 847D953715A8E900008E7869 /* SN_icons */; };
 		847D953D15A8E9A6008E7869 /* layerSN_icons.mm in Sources */ = {isa = PBXBuildFile; fileRef = 847D953C15A8E9A6008E7869 /* layerSN_icons.mm */; };
 		8485D237158A553C00FE2C7C /* MainMenuLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8485D236158A553C00FE2C7C /* MainMenuLayer.mm */; };
-		8485D23D158A75DA00FE2C7C /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8485D23C158A75DA00FE2C7C /* libfacebook_ios_sdk.a */; };
-		8485D23F158A75F600FE2C7C /* facebook-ios-sdk in Resources */ = {isa = PBXBuildFile; fileRef = 8485D23E158A75F600FE2C7C /* facebook-ios-sdk */; };
-		8485D242158A76FD00FE2C7C /* FBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485D241158A76FD00FE2C7C /* FBC.m */; };
 		8499FA6C157B96970098D4F7 /* anim in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA2E157B96970098D4F7 /* anim */; };
 		8499FA6D157B96970098D4F7 /* c_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA2F157B96970098D4F7 /* c_big.png */; };
 		8499FA7C157B96970098D4F7 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499FA3E157B96970098D4F7 /* desk.png */; };
@@ -175,6 +172,7 @@
 		84DC224F157B94DD003F6617 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84DC224E157B94DD003F6617 /* RootViewController.mm */; };
 		84DC2253157B94DD003F6617 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2252157B94DD003F6617 /* AppDelegate.cpp */; };
 		84DC2256157B94DD003F6617 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2255157B94DD003F6617 /* HelloWorldScene.cpp */; };
+		8C2832F81664A2DC002CF215 /* winners in Resources */ = {isa = PBXBuildFile; fileRef = 8C2832F71664A2DC002CF215 /* winners */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,9 +192,6 @@
 		847D953C15A8E9A6008E7869 /* layerSN_icons.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = layerSN_icons.mm; path = Classes/layerSN_icons.mm; sourceTree = "<group>"; };
 		8485D236158A553C00FE2C7C /* MainMenuLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainMenuLayer.mm; path = Classes/MainMenuLayer.mm; sourceTree = "<group>"; };
 		8485D23C158A75DA00FE2C7C /* libfacebook_ios_sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfacebook_ios_sdk.a; path = "Croco/facebook-ios-sdk/libfacebook_ios_sdk.a"; sourceTree = "<group>"; };
-		8485D23E158A75F600FE2C7C /* facebook-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "facebook-ios-sdk"; sourceTree = "<group>"; };
-		8485D240158A76FD00FE2C7C /* FBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBC.h; path = Classes/FBC.h; sourceTree = "<group>"; };
-		8485D241158A76FD00FE2C7C /* FBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBC.m; path = Classes/FBC.m; sourceTree = "<group>"; };
 		8499FA2E157B96970098D4F7 /* anim */ = {isa = PBXFileReference; lastKnownFileType = folder; name = anim; path = Resource/anim; sourceTree = "<group>"; };
 		8499FA2F157B96970098D4F7 /* c_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = c_big.png; path = Resource/c_big.png; sourceTree = "<group>"; };
 		8499FA3E157B96970098D4F7 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = Resource/desk.png; sourceTree = "<group>"; };
@@ -510,6 +505,7 @@
 		84DC2252157B94DD003F6617 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		84DC2254157B94DD003F6617 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		84DC2255157B94DD003F6617 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		8C2832F71664A2DC002CF215 /* winners */ = {isa = PBXFileReference; lastKnownFileType = folder; name = winners; path = Resource/winners; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -519,7 +515,6 @@
 			files = (
 				847D953015A89DCF008E7869 /* Accounts.framework in Frameworks */,
 				847D952915A89DB8008E7869 /* Twitter.framework in Frameworks */,
-				8485D23D158A75DA00FE2C7C /* libfacebook_ios_sdk.a in Frameworks */,
 				84DC209B157B94DB003F6617 /* QuartzCore.framework in Frameworks */,
 				84DC209D157B94DB003F6617 /* OpenGLES.framework in Frameworks */,
 				84DC209F157B94DB003F6617 /* OpenAL.framework in Frameworks */,
@@ -586,6 +581,7 @@
 		84DC20AB157B94DB003F6617 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C2832F71664A2DC002CF215 /* winners */,
 				842F053015DEC3BD00ACD8DD /* cards.xml */,
 				842F052A15DEBDDF00ACD8DD /* fonts */,
 				8402122915B7457900E2603C /* fonts */,
@@ -1134,7 +1130,6 @@
 		84DC2250157B94DD003F6617 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8485D23E158A75F600FE2C7C /* facebook-ios-sdk */,
 				8499FAAA157B96A50098D4F7 /* CCScrollLayer.cpp */,
 				8499FAAB157B96A50098D4F7 /* CCScrollLayer.h */,
 				8499FAAC157B96A50098D4F7 /* Credits.cpp */,
@@ -1156,8 +1151,6 @@
 				84DC2252157B94DD003F6617 /* AppDelegate.cpp */,
 				84DC2254157B94DD003F6617 /* HelloWorldScene.h */,
 				84DC2255157B94DD003F6617 /* HelloWorldScene.cpp */,
-				8485D240158A76FD00FE2C7C /* FBC.h */,
-				8485D241158A76FD00FE2C7C /* FBC.m */,
 				840CCCB315A72CD100306FC1 /* VKConnectViewController.h */,
 				840CCCB415A72CD100306FC1 /* VKConnectViewController.m */,
 				847D953C15A8E9A6008E7869 /* layerSN_icons.mm */,
@@ -1242,13 +1235,13 @@
 				8499FA9D157B96970098D4F7 /* SubMenu in Resources */,
 				8499FA9F157B96970098D4F7 /* Timer in Resources */,
 				8499FAA6157B96970098D4F7 /* tokens in Resources */,
-				8485D23F158A75F600FE2C7C /* facebook-ios-sdk in Resources */,
 				847D953815A8E900008E7869 /* SN_icons in Resources */,
 				8402122A15B7457900E2603C /* fonts in Resources */,
 				842F052515DEA31A00ACD8DD /* icon-hhd.png in Resources */,
 				842F052B15DEBDDF00ACD8DD /* fonts in Resources */,
 				842F053115DEC3BD00ACD8DD /* cards.xml in Resources */,
 				842F053315DECE6300ACD8DD /* desk-HD.png in Resources */,
+				8C2832F81664A2DC002CF215 /* winners in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1381,7 +1374,6 @@
 				8499FAC4157B96A50098D4F7 /* GroupCustomization.cpp in Sources */,
 				8499FAC8157B96A50098D4F7 /* SubMenu.cpp in Sources */,
 				8485D237158A553C00FE2C7C /* MainMenuLayer.mm in Sources */,
-				8485D242158A76FD00FE2C7C /* FBC.m in Sources */,
 				840CCCB515A72CD100306FC1 /* VKConnectViewController.m in Sources */,
 				847D953D15A8E9A6008E7869 /* layerSN_icons.mm in Sources */,
 				8402122D15B747EF00E2603C /* TextureCache.cpp in Sources */,
@@ -1412,7 +1404,7 @@
 					"\"$(PROJECT_NAME)/libs/CocosDenshion/include\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1435,7 +1427,7 @@
 					"\"$(PROJECT_NAME)/libs/CocosDenshion/include\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -1474,7 +1466,7 @@
 				PROVISIONING_PROFILE = "630B8FEE-0351-4F0D-A083-829BD06A173A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "630B8FEE-0351-4F0D-A083-829BD06A173A";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1511,7 +1503,7 @@
 				PROVISIONING_PROFILE = "9108C646-5B99-461D-954D-E8F774EA6478";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9108C646-5B99-461D-954D-E8F774EA6478";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

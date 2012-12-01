@@ -73,7 +73,8 @@ bool AppDelegate::applicationDidFinishLaunching()
 
 #ifndef __APPLE__
     // sets landscape mode
-    pDirector->setDeviceOrientation(kCCDeviceOrientationLandscapeLeft);
+    //pDirector->setDeviceOrientation(kCCDeviceOrientationLandscapeLeft); // kCCDeviceOrientationLandscapeLeft 2
+    CCDirector::sharedDirector()->setDeviceOrientation(kCCDeviceOrientationLandscapeLeft);
 #endif
     
     // turn on display FPS

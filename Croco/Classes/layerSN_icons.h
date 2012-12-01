@@ -12,7 +12,7 @@
 #include "CrocoBoardGame.h"
 #import <Twitter/Twitter.h>
 #import <Accounts/Accounts.h>
-#import "FBC.h"
+//#import "FBC.h"
 #import "VKConnectViewController.h"
 
 #include "TextureCache.h"
