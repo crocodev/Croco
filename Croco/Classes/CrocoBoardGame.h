@@ -217,9 +217,9 @@ class ActionLayer;
 //œÓÁËˆËÓÌËÓ‚‡ÌËÂ Í‡Ú
 #define CARD_OFFSET_X		379
 #define CARD_OFFSET_Y		-1
-#define CARD_WIDTH			154
-#define CARD_HEIGHT			126
-#define CARD_PADDING		12
+#define CARD_WIDTH			152
+#define CARD_HEIGHT			114
+#define CARD_PADDING		22
 
 #define TABLEMAX			45
 #define TABLEMIN			0

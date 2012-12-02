@@ -263,7 +263,7 @@ ActionLayer::ActionLayer(int GameMode, std::string *RedName, std::string *GreenN
 	itm_card3 = CCMenuItemImage::itemFromNormalImage(RightControl_c3,RightControl_c3,this,menu_selector(ActionLayer::itm_card3Callback));
 	itm_card4 = CCMenuItemImage::itemFromNormalImage(RightControl_c4,RightControl_c4,this,menu_selector(ActionLayer::itm_card4Callback));
 	itm_card5 = CCMenuItemImage::itemFromNormalImage(RightControl_c5,RightControl_c5,this,menu_selector(ActionLayer::itm_card5Callback));
-	mn_Cards = CCMenu::menuWithItems(itm_card3, itm_card4, itm_card5, NULL);
+	mn_Cards = CCMenu::menuWithItems(itm_card5, itm_card4, itm_card3, NULL);
 	mn_Cards->alignItemsVerticallyWithPadding(CARD_PADDING);
 	addChild(mn_Cards);
 	m_mnCardsX=x+CARD_OFFSET_X;
@@ -754,14 +754,14 @@ void ActionLayer::itm_card3Callback(CCObject* pSender)
     mn_Cards->setIsTouchEnabled(0);
 	checked_card = CCSprite::spriteWithFile(RightControl_c3);
 	addChild(checked_card,2,CARD_LAYER);
-	checked_card->setPosition(CCPointMake(m_mnCardsX,m_mnCardsY+CARD_HEIGHT+CARD_PADDING));
+	checked_card->setPosition(CCPointMake(m_mnCardsX,m_mnCardsY-CARD_HEIGHT-CARD_PADDING));
 	MoveCardFromControl();
     
     PLAYEFFECT(_sndCheckcard)
 }
 void ActionLayer::MoveCardFromControl()
 {
-	CCActionInterval* move=CCMoveTo::actionWithDuration(0.5f,CCPointMake(m_mnCardsX,m_mnCardsY+2*(126+CARD_PADDING)));
+	CCActionInterval* move=CCMoveTo::actionWithDuration(0.5f,CCPointMake(m_mnCardsX,m_mnCardsY+2*(117+CARD_PADDING)));
 	//CCActionInterval* move_exp_in = (CCActionInterval*)CCEaseExponentialIn::actionWithAction((CCActionInterval*)(move->copy()->autorelease()));
 	CCActionInterval* move_exp_in = (CCActionInterval*)CCEaseInOut::actionWithAction((CCActionInterval*)(move->copy()->autorelease()),4.0f);
 
@@ -892,7 +892,7 @@ void ActionLayer::itm_card5Callback(CCObject* pSender)
 	mn_Cards->setIsTouchEnabled(0);
 	checked_card = CCSprite::spriteWithFile(RightControl_c5);
 	addChild(checked_card,2,CARD_LAYER);
-	checked_card->setPosition(CCPointMake(m_mnCardsX,m_mnCardsY-CARD_HEIGHT-CARD_PADDING));
+	checked_card->setPosition(CCPointMake(m_mnCardsX,m_mnCardsY+CARD_HEIGHT+CARD_PADDING));
 	MoveCardFromControl();
     
     PLAYEFFECT(_sndCheckcard)
