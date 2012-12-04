@@ -13,7 +13,72 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1710"
          endingLineNumber = "1710"
-         landmarkName = "WinnerMenu::WinnerMenu(ActionLayer* al, int Group)"
+         landmarkName = "GameMenuLayer::CheckPoint(CCPoint cp)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/AppDelegate.cpp"
+         timestampString = "376317625.162246"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
+         landmarkName = "AppDelegate::applicationDidFinishLaunching()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/AppDelegate.cpp"
+         timestampString = "376318190.766088"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
+         landmarkName = "AppDelegate::applicationDidFinishLaunching()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/AppDelegate.cpp"
+         timestampString = "376318312.469946"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
+         landmarkName = "AppDelegate::applicationDidFinishLaunching()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/TextureCache.cpp"
+         timestampString = "376318428.310467"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "25"
+         endingLineNumber = "25"
+         landmarkName = "TextureCacheLayer::TextureCacheLayer()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/TextureCache.cpp"
+         timestampString = "376318491.731527"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
+         landmarkName = "TextureCacheLayer::TextureCacheLayer()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

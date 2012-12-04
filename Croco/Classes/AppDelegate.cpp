@@ -102,7 +102,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCScene* pS_TextureCacheScene = CCScene::node();
 	CCLayer* pL_TextureCacheLayer = new TextureCacheLayer();
 	pS_TextureCacheScene->addChild(pL_TextureCacheLayer,0);
-	pL_TextureCacheLayer->release();
+	//pL_TextureCacheLayer->release();
     pDirector->runWithScene(pS_TextureCacheScene);
     return true;
 }
