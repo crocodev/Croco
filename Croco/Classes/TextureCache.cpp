@@ -12,7 +12,7 @@
 using namespace cocos2d;
 
 TextureCacheLayer::TextureCacheLayer()
-: m_nNumberOfSprites(75)
+: m_nNumberOfSprites(71)
 , m_nNumberOfLoadedSprites(0)
 {
 	CCSize size = CCDirector::sharedDirector()->getWinSize();
@@ -57,14 +57,9 @@ TextureCacheLayer::TextureCacheLayer()
     ADDIMAGE(Timer_timer_digits_light)
     ADDIMAGE(Timer_timer_digits_passive)
     ADDIMAGE(Timer_timer_forest)
-    //Desk 3
+    //Desk 2
     ADDIMAGE(_desk)
     ADDIMAGE(_c_big)
-    ADDIMAGE(_c_big_all)
-    //Activity 3
-    ADDIMAGE(act_o)
-    ADDIMAGE(act_p)
-    ADDIMAGE(act_r)
     //GameMenu 11
     ADDIMAGE(GameMenu_gamemenu)
     ADDIMAGE(GameMenu_help)
