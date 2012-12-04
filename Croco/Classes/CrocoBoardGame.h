@@ -97,11 +97,6 @@ class ActionLayer;
 //Desk
 #define _desk                               "desk.png"
 #define _c_big                              "c_big.png"
-#define _c_big_all                          "c_big_all.png"
-//Activity
-#define act_o                               "o.png"
-#define act_p                               "p.png"
-#define act_r                               "r.png"
 //GameMenu 10
 #define GameMenu_gamemenu                   "GameMenu/gamemenu.png"
 #define GameMenu_help                       "GameMenu/help.png"

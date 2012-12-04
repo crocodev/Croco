@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376165803.470797"
+         timestampString = "367272371.871337"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1597"
-         endingLineNumber = "1597"
+         startingLineNumber = "1572"
+         endingLineNumber = "1572"
          landmarkName = "GameMenuLayer::ccTouchBegan(CCTouch *touch, CCEvent *withEvent)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376165803.470797"
+         timestampString = "367272371.871337"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1356"
-         endingLineNumber = "1356"
+         startingLineNumber = "1331"
+         endingLineNumber = "1331"
          landmarkName = "ActionLayer::RewindAnimation(CCLayer* parent)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -190,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376164619.042297"
+         timestampString = "367270468.860704"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "796"
-         endingLineNumber = "796"
+         startingLineNumber = "818"
+         endingLineNumber = "818"
          landmarkName = "ActionLayer::MoveCardFaceSide()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +203,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376164619.042297"
+         timestampString = "367270468.860704"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "793"
+         endingLineNumber = "793"
+         landmarkName = "ActionLayer::MoveCardFaceSide()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/CrocoBoardGame.cpp"
+         timestampString = "367270468.860704"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "792"
          endingLineNumber = "792"
+         landmarkName = "ActionLayer::MoveCardFaceSide()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Croco/Classes/CrocoBoardGame.cpp"
+         timestampString = "367270468.860704"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "819"
+         endingLineNumber = "819"
          landmarkName = "ActionLayer::MoveCardFaceSide()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -307,11 +333,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376165803.470797"
+         timestampString = "367272371.871337"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1728"
-         endingLineNumber = "1728"
+         startingLineNumber = "1703"
+         endingLineNumber = "1703"
          landmarkName = "WinnerMenu::WinnerMenu(ActionLayer* al, int Group)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -320,11 +346,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376165803.470797"
+         timestampString = "367272371.871337"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1750"
-         endingLineNumber = "1750"
+         startingLineNumber = "1725"
+         endingLineNumber = "1725"
          landmarkName = "WinnerMenu::WinnerMenu(ActionLayer* al, int Group)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -372,11 +398,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376165803.470797"
+         timestampString = "367272371.871337"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1509"
-         endingLineNumber = "1509"
+         startingLineNumber = "1484"
+         endingLineNumber = "1484"
          landmarkName = "GameMenuLayer::GameMenuLayer()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -398,11 +424,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Croco/Classes/CrocoBoardGame.cpp"
-         timestampString = "376165803.470797"
+         timestampString = "367271849.002516"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "991"
-         endingLineNumber = "991"
+         startingLineNumber = "966"
+         endingLineNumber = "966"
          landmarkName = "ActionLayer::TimerOver()"
          landmarkType = "5">
       </FileBreakpoint>
